@@ -1,8 +1,8 @@
 module GHR_PC (
-    input clk,               // System Clock
-    input rst,               // Active-high System Reset
+    input clk,              
+    input rst,              
     input branch_taken,      // From Execute Stage (Actual branch outcome)
-    input [31:0] pc,         // From Fetch Stage (Current PC)
+    input [31:0] pc,        //(Current PC)
     output wire [3:0] index, // To PHT and BTB (Index for lookup)
     output reg [3:0] updated_ghr // To store updated global history in BPU
 );
