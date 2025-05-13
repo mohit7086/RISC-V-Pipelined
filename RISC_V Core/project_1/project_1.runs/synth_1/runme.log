@@ -1,0 +1,369 @@
+
+*** Running vivado
+    with args -log RISC_V_Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISC_V_Top.tcl
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Thu May  8 11:57:04 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source RISC_V_Top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {M:/College/BTP/Vivado_Simulations/RISC_V Core/project_1/project_1.srcs/utils_1/imports/synth_1/RISC_V_Top.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from M:/College/BTP/Vivado_Simulations/RISC_V Core/project_1/project_1.srcs/utils_1/imports/synth_1/RISC_V_Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top RISC_V_Top -part xc7k160tifbv676-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160ti'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13028
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 778.012 ; gain = 475.035
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'RISC_V_Top' [M:/College/BTP/Vivado_Simulations/RISC_V Core/RISC-V_Top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FetchStage' [M:/College/BTP/Vivado_Simulations/RISC_V Core/FetchStage.v:43]
+INFO: [Synth 8-6157] synthesizing module 'BPU_Top' [M:/College/BTP/Vivado_Simulations/RISC_V Core/BPU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'GHR_PC' [M:/College/BTP/Vivado_Simulations/RISC_V Core/BPU.v:150]
+INFO: [Synth 8-6155] done synthesizing module 'GHR_PC' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/BPU.v:150]
+INFO: [Synth 8-6157] synthesizing module 'BTB' [M:/College/BTP/Vivado_Simulations/RISC_V Core/BPU.v:175]
+INFO: [Synth 8-6155] done synthesizing module 'BTB' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/BPU.v:175]
+INFO: [Synth 8-6157] synthesizing module 'PHT' [M:/College/BTP/Vivado_Simulations/RISC_V Core/BPU.v:92]
+INFO: [Synth 8-226] default block is never used [M:/College/BTP/Vivado_Simulations/RISC_V Core/BPU.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'PHT' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/BPU.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'BPU_Top' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/BPU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'INST_MEM' [M:/College/BTP/Vivado_Simulations/RISC_V Core/Inst_Mem.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'INST_MEM' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/Inst_Mem.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FetchStage' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/FetchStage.v:43]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID' [M:/College/BTP/Vivado_Simulations/RISC_V Core/IF_ID.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/IF_ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Decode_Stage' [M:/College/BTP/Vivado_Simulations/RISC_V Core/Decode_Stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'GPR' [M:/College/BTP/Vivado_Simulations/RISC_V Core/GPR.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'GPR' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/GPR.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Imm_Gen' [M:/College/BTP/Vivado_Simulations/RISC_V Core/Imm_Gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Imm_Gen' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/Imm_Gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Control_Unit' [M:/College/BTP/Vivado_Simulations/RISC_V Core/Control_Unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Control_Unit' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/Control_Unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Decode_Stage' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/Decode_Stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_EX' [M:/College/BTP/Vivado_Simulations/RISC_V Core/ID_EX.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/ID_EX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Execution_Stage' [M:/College/BTP/Vivado_Simulations/RISC_V Core/Execute_Stage.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ForwardingUnitWithMUX' [M:/College/BTP/Vivado_Simulations/RISC_V Core/Forwarding_Unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ForwardingUnitWithMUX' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/Forwarding_Unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Control' [M:/College/BTP/Vivado_Simulations/RISC_V Core/ALU_Control.v:1]
+INFO: [Synth 8-226] default block is never used [M:/College/BTP/Vivado_Simulations/RISC_V Core/ALU_Control.v:26]
+INFO: [Synth 8-226] default block is never used [M:/College/BTP/Vivado_Simulations/RISC_V Core/ALU_Control.v:28]
+INFO: [Synth 8-226] default block is never used [M:/College/BTP/Vivado_Simulations/RISC_V Core/ALU_Control.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Control' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/ALU_Control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [M:/College/BTP/Vivado_Simulations/RISC_V Core/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Branch_Unit' [M:/College/BTP/Vivado_Simulations/RISC_V Core/Branch_Unit.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Branch_Unit' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/Branch_Unit.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Execution_Stage' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/Execute_Stage.v:2]
+INFO: [Synth 8-6157] synthesizing module 'EX_MEM' [M:/College/BTP/Vivado_Simulations/RISC_V Core/EX_MEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EX_MEM' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/EX_MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Mem_Stage' [M:/College/BTP/Vivado_Simulations/RISC_V Core/Mem_Stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [M:/College/BTP/Vivado_Simulations/RISC_V Core/DataMemory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/DataMemory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Mem_Stage' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/Mem_Stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MEM_WB' [M:/College/BTP/Vivado_Simulations/RISC_V Core/MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_WB' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/MEM_WB.v:1]
+INFO: [Synth 8-6157] synthesizing module 'WriteBack_Stage' [M:/College/BTP/Vivado_Simulations/RISC_V Core/WriteBack_Stage.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'WriteBack_Stage' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/WriteBack_Stage.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RISC_V_Top' (0#1) [M:/College/BTP/Vivado_Simulations/RISC_V Core/RISC-V_Top.v:1]
+WARNING: [Synth 8-3848] Net Memory in module/entity INST_MEM does not have driver. [M:/College/BTP/Vivado_Simulations/RISC_V Core/Inst_Mem.v:7]
+WARNING: [Synth 8-7129] Port alu_result[31] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[30] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[29] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[28] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[27] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[26] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[25] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[24] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[23] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[22] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[21] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[20] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[19] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[18] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[17] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[16] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[15] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[14] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[13] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[12] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[1] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port alu_result[0] in module Mem_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[6] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[4] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[3] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[2] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[1] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[0] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module Execution_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module Execution_Stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[6] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[5] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[4] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[3] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[2] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[1] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[0] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[31] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[30] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[29] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[28] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[27] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[26] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[25] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[24] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[23] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[22] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[21] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[20] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[19] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[18] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[17] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[16] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[15] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[14] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[13] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[12] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[11] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[10] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[9] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[8] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[7] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[6] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[5] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[4] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[3] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[2] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[1] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[0] in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module INST_MEM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index[3] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index[2] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index[1] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port index[0] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[31] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[30] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[29] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[28] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[27] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[26] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[25] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[24] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[23] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[22] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[21] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[20] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[19] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[18] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[17] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[16] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[15] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[14] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[13] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[12] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[11] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[10] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[9] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[8] in module PHT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port resolved_pc[7] in module PHT is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 894.258 ; gain = 591.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 894.258 ; gain = 591.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tifbv676-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 894.258 ; gain = 591.281
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tifbv676-2L
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 894.258 ; gain = 591.281
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      4 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 65    
+	               28 Bit    Registers := 16    
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 18    
+	                1 Bit    Registers := 22    
++---RAMs : 
+	              32K Bit	(1024 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 12    
+	   3 Input   32 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 66    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1078.359 ; gain = 775.383
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1093.227 ; gain = 790.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1093.227 ; gain = 790.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1289.719 ; gain = 986.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1289.719 ; gain = 986.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1289.719 ; gain = 986.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1289.719 ; gain = 986.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1289.719 ; gain = 986.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1289.719 ; gain = 986.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     1|
+|4     |FDCE   |    31|
+|5     |FDRE   |    31|
+|6     |IBUF   |     2|
+|7     |OBUF   |    64|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+-----------+------+
+|      |Instance           |Module     |Cells |
++------+-------------------+-----------+------+
+|1     |top                |           |   138|
+|2     |  fetch_stage_inst |FetchStage |    71|
+|3     |    bpu            |BPU_Top    |    40|
++------+-------------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1289.719 ; gain = 986.742
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 146 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1289.719 ; gain = 986.742
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1289.719 ; gain = 986.742
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1304.707 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1413.141 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: d260947c
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 1413.141 ; gain = 1115.754
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1413.141 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'M:/College/BTP/Vivado_Simulations/RISC_V Core/project_1/project_1.runs/synth_1/RISC_V_Top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file RISC_V_Top_utilization_synth.rpt -pb RISC_V_Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu May  8 11:57:54 2025...
