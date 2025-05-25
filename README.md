@@ -69,4 +69,4 @@ Implements the **RV32I Base Integer Instruction Set**, including:
 
 ## Block Diagram
 
-![RISC-V Pipeline Diagram](/pipeline_diagram.png)
+![RISC-V Pipeline Diagram](RV32I Pipelined Architecture.png)
