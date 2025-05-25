@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar 20 13:39:34 2025" VIVADOVERSION="2024.2">
+
+  <SYSTEMINFO ARCH="kintex7" DEVICE="7k70t" NAME="EX" PACKAGE="fbv676" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS/>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/ALU_0" HWVERSION="1.0" INSTANCE="ALU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ALU" VLNV="xilinx.com:module_ref:ALU:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="EX_ALU_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="a" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="alu_ctrl" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="alu_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="b" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ALU_Control_0" HWVERSION="1.0" INSTANCE="ALU_Control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ALU_Control" VLNV="xilinx.com:module_ref:ALU_Control:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="EX_ALU_Control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="3" NAME="alu_ctrl" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="alu_op" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="funct3" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="6" NAME="funct7" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="is_lui" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Branch_Unit_0" HWVERSION="1.0" INSTANCE="Branch_Unit_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Branch_Unit" VLNV="xilinx.com:module_ref:Branch_Unit:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="EX_Branch_Unit_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="a" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="b" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="branch_taken" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="funct3" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ExecutionStage_0" HWVERSION="1.0" INSTANCE="ExecutionStage_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ExecutionStage" VLNV="xilinx.com:module_ref:ExecutionStage:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="EX_ExecutionStage_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="ALUSrcA" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="EX_MEM_RD_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="EX_MEM_RegWrite_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="EX_MEM_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="ID_EX_RS_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="ID_EX_RT_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="MEM_WB_RD_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="MEM_WB_RegWrite_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="MEM_WB_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="PC_ID_EX" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="alu_op" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="alu_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="alu_src" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="branch_addr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="branch_taken" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="funct3" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="6" NAME="funct7" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="immediate_data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="is_jalr" SIGIS="undef"/>
+        <PORT DIR="I" NAME="is_lui" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="rs1_data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="rs2_data" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ForwardingUnitWithMUX_0" HWVERSION="1.0" INSTANCE="ForwardingUnitWithMUX_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ForwardingUnitWithMUX" VLNV="xilinx.com:module_ref:ForwardingUnitWithMUX:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="EX_ForwardingUnitWithMUX_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="4" NAME="EX_MEM_RD_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="EX_MEM_RegWrite_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="EX_MEM_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="ForwardedDataA_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="ForwardedDataB_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="ID_EX_RS_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="ID_EX_RT_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="MEM_WB_RD_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="MEM_WB_RegWrite_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="MEM_WB_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="rs1_data" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="rs2_data" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

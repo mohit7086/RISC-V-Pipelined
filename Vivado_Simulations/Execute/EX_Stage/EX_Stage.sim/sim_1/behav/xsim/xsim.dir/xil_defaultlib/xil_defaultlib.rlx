@@ -1,0 +1,11 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+M:/College/BTP/Vivado_Simulations/Execute/ALU.v,1745931160,verilog,,M:/College/BTP/Vivado_Simulations/Execute/ALU_Control.v,,ALU,,,,,,,,
+M:/College/BTP/Vivado_Simulations/Execute/ALU_Control.v,1745931169,verilog,,M:/College/BTP/Vivado_Simulations/Execute/Branch_Unit.v,,ALU_Control,,,,,,,,
+M:/College/BTP/Vivado_Simulations/Execute/Branch_Unit.v,1742417695,verilog,,M:/College/BTP/Vivado_Simulations/Execute/Execute_Stage.v,,Branch_Unit,,,,,,,,
+M:/College/BTP/Vivado_Simulations/Execute/EX_Stage/EX_Stage.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
+M:/College/BTP/Vivado_Simulations/Execute/EX_tb.v,1746537108,verilog,,,,ExecutionStage_tb,,,,,,,,
+M:/College/BTP/Vivado_Simulations/Execute/Execute_Stage.v,1746536490,verilog,,M:/College/BTP/Vivado_Simulations/Execute/Forwarding_Unit.v,,ExecutionStage,,,,,,,,
+M:/College/BTP/Vivado_Simulations/Execute/Forwarding_Unit.v,1746437275,verilog,,M:/College/BTP/Vivado_Simulations/Execute/EX_tb.v,,ForwardingUnitWithMUX,,,,,,,,

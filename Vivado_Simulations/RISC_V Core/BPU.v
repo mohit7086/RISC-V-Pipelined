@@ -1,0 +1,228 @@
+module BPU_Top (
+    input clk,                
+    input rst,                
+    input [31:0] pc,      
+
+    // Update inputs (from Execute stage)
+    input [31:0] alu_out,      // Computed branch target from Execute stage
+    input branch_taken,        // Branch outcome from Execute stage
+    input branch_resolved,     // Branch resolution signal from Execute stage
+    input [3:0] ghr_history,   // GHR from pipeline register (Execute stage)
+    input [31:0] resolved_pc,  // Resolved PC from pipeline register (Execute stage)
+   
+   // Outputs (to Fetch stage)
+    output reg [31:0] predicted_pc, // Final branch target or PC (if not taken)
+    output reg [3:0] ghr_out,      // Updated GHR to be stored in pipeline register
+    output reg prediction_valid    // Indicates if a branch is predicted
+);
+
+
+
+
+// Internal connections
+wire [3:0] index;          // Index computed for BTB & PHT lookup
+wire [31:0] btb_address;   // Predicted branch target from BTB
+wire btb_hit;              // Indicates if BTB has a valid entry
+wire prediction;           // Branch prediction outcome
+wire [3:0] ghr_out_wire;
+
+GHR_PC ghr_pc_inst (
+    .clk(clk),
+    .rst(rst),
+    .pc(pc),
+    .branch_taken(branch_taken),  // From Execute stage
+    .index(index),                // To PHT and BTB
+    .updated_ghr(ghr_out_wire)         // To store updated GHR in pipeline register
+);
+
+
+BTB btb_inst (
+    .clk(clk),
+    .rst(rst),
+    .pc(pc),
+    .index(index),                      // From GHR_PC
+
+    // From Execute stage
+    .resolved_pc(resolved_pc),          
+    .ghr_history(ghr_history),          
+    .alu_out(alu_out),                 
+    .branch_taken(branch_taken),
+    .branch_resolved(branch_resolved),
+
+    // To Fetch stage
+    .btb_address(btb_address),
+    .btb_hit(btb_hit)
+);
+
+PHT pht_inst (
+    .clk(clk),
+    .rst(rst),
+    .index(index),                       // From GHR_PC
+
+    // From Execute stage
+    .resolved_pc(resolved_pc),
+    .ghr_history(ghr_history),
+    .branch_taken(branch_taken),
+    .branch_resolved(branch_resolved),
+
+    // To top_BPU
+    .prediction(prediction)              
+);
+
+always @(posedge clk or posedge rst)begin
+    if(rst)begin
+        predicted_pc <= 32'b0;
+        prediction_valid <= 1'b0;
+        ghr_out <= 4'b0;
+    end
+    
+    else begin 
+        predicted_pc <= (btb_hit&prediction) ? btb_address : pc+4;
+        prediction_valid <= btb_hit&prediction;
+        ghr_out <= ghr_out_wire;
+    end 
+end
+
+
+endmodule
+
+
+
+
+module PHT (
+    input clk,                 // System Clock
+    input rst,                 // System Reset
+    input [3:0] index,         // Lookup index from GHR_PC
+    input branch_taken,        // Actual branch outcome from Execute Stage
+    input [3:0] ghr_history,   // GHR from pipeline register (Ex stage)
+    input [31:0] resolved_pc,  // Resolved PC from pipeline register (Ex stage)
+    input branch_resolved,     // Indicates branch execution completion from Execute Stage
+    output wire prediction     // Predicted taken/not taken to top_BPU
+);
+
+parameter strongly_not_taken = 2'b00;
+parameter weakly_not_taken   = 2'b01;
+parameter weakly_taken       = 2'b10;
+parameter strongly_taken     = 2'b11;
+
+reg [1:0] PHT_Table [15:0]; // 2-bit saturating counters for prediction
+
+reg [1:0] state, next_state; // Current state and next state registers
+
+wire [3:0] resolved_index;
+
+// Compute resolved index using XOR of GHR history and resolved PC
+assign resolved_index = ghr_history ^ resolved_pc[3:0];
+
+// Prediction is '1' if the state is weakly_taken or strongly_taken
+assign prediction = (state == weakly_taken) || (state == strongly_taken);
+
+integer i;
+
+// Sequential logic: Update state on clock edge or reset
+always @(posedge clk or posedge rst) begin
+    if (rst) begin
+        // Reset the PHT_Table to strongly_not_taken
+        for (i = 0; i < 16; i = i + 1) begin
+            PHT_Table[i] <= strongly_not_taken;
+        end
+        state <= strongly_not_taken; // Reset the state
+    end else begin
+        state <= next_state; // Update state with next state
+        PHT_Table[resolved_index] <= next_state; // Update PHT table entry
+    end
+end
+
+// Combinational logic: Determine next state
+always @(*) begin
+    case (PHT_Table[resolved_index])
+        strongly_not_taken: next_state = branch_taken ? weakly_not_taken : strongly_not_taken;
+        weakly_not_taken:   next_state = branch_taken ? weakly_taken : strongly_not_taken;
+        weakly_taken:       next_state = branch_taken ? strongly_taken : weakly_not_taken;
+        strongly_taken:     next_state = branch_taken ? strongly_taken : weakly_taken;
+        default:            next_state = strongly_not_taken; // Default case
+    endcase
+end
+
+endmodule
+
+
+module GHR_PC (
+    input clk,               // System Clock
+    input rst,               // Active-high System Reset
+    input branch_taken,      // From Execute Stage (Actual branch outcome)
+    input [31:0] pc,         // From Fetch Stage (Current PC)
+    output wire [3:0] index, // To PHT and BTB (Index for lookup)
+    output reg [3:0] updated_ghr // To store updated global history in BPU
+);
+
+reg [3:0] ghr; // Global History Register
+
+always @(posedge clk or posedge rst) begin
+    if (rst) begin // Active-high reset
+        ghr <= 4'b0; // Reset GHR
+        updated_ghr <= 4'b0; // Reset updated GHR
+    end else begin
+        ghr <= {ghr[2:0], branch_taken}; // Shift in new branch outcome
+        updated_ghr <= {ghr[2:0], branch_taken}; // Outputs the next GHR value
+    end
+end
+
+assign index = pc[3:0] ^ ghr; // XOR with PC bits to form index
+
+endmodule
+
+module BTB (
+    input          clk,             // System clock
+    input          rst,             // System reset
+    // Lookup inputs (from Fetch stage)
+    input   [3:0]  index,           // Index computed as (PC[3:0] ^ GHR) at prediction time
+    input   [31:0] pc,              // Fetch-stage PC
+    // Update inputs (from Execute stage)
+    input   [31:0] resolved_pc,     // Execute-stage PC corresponding to the resolved branch (from pipeline register)
+    input   [3:0]  ghr_history,     // GHR captured at prediction time (pipelined register)
+    input   [31:0] alu_out,         // Computed branch target from Execute stage
+    input          branch_taken,    // Branch outcome: taken or not taken
+    input          branch_resolved, // Trigger signal when branch is resolved (update BTB)
+    
+    // Outputs (to Fetch stage)
+    output wire [31:0] btb_address,  // Predicted branch target address
+    output wire        btb_hit       // BTB hit signal (prediction valid)
+);
+
+// BTB Storage (16 entries)
+reg  [15:0]  valid;                  // Valid bit array (1-bit per entry)
+reg  [27:0]  tag [0:15];              // Array of 16 entries, each 28-bit wide
+reg  [31:0]  btb_target [0:15];       // Array of 16 entries, each 32-bit wide
+
+// Compute tag and index for lookup
+wire [27:0] pc_tag = pc[31:4];         // Fetch-stage tag
+assign btb_hit = valid[index] && (tag[index] == pc_tag);
+assign btb_address = btb_hit ? btb_target[index] : 32'b0;
+
+
+wire [3:0] resolved_index = resolved_pc[3:0] ^ ghr_history; // XOR historical GHR with resolved PC lower bits
+wire [27:0] resolved_tag  = resolved_pc[31:4];              // Extract tag from resolved PC
+
+// Declare `i` at module level
+integer i;  
+
+// Sequential update for BTB
+always @(posedge clk or posedge rst) begin
+    if (rst) begin
+        // Reset all BTB entries
+        for (i = 0; i < 16; i = i + 1) begin
+            valid[i] <= 1'b0;
+            tag[i]   <= 28'b0;
+            btb_target[i] <= 32'b0;
+        end
+    end 
+    else if (branch_resolved && branch_taken) begin
+        // Update BTB with resolved branch information
+        valid[resolved_index] <= 1'b1;
+        tag[resolved_index] <= resolved_tag;
+        btb_target[resolved_index] <= alu_out;
+    end
+end
+
+endmodule

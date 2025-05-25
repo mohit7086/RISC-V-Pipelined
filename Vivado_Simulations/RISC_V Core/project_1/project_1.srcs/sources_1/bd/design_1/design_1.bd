@@ -1,0 +1,91 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7k160tifbv676-2L",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2"
+    },
+    "design_tree": {
+      "INST_MEM_0": "",
+      "ALU_0": ""
+    },
+    "components": {
+      "INST_MEM_0": {
+        "vlnv": "xilinx.com:module_ref:INST_MEM:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_INST_MEM_0_0",
+        "xci_path": "ip\\design_1_INST_MEM_0_0\\design_1_INST_MEM_0_0.xci",
+        "inst_hier_path": "INST_MEM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "INST_MEM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "PC": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Instruction_Code": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "ALU_0": {
+        "vlnv": "xilinx.com:module_ref:ALU:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_ALU_0_0",
+        "xci_path": "ip\\design_1_ALU_0_0\\design_1_ALU_0_0.xci",
+        "inst_hier_path": "ALU_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ALU",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "alu_ctrl": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "alu_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    }
+  }
+}

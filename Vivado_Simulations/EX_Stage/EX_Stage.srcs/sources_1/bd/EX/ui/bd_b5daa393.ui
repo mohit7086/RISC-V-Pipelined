@@ -1,0 +1,17 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.441942",
+   "Default View_TopLeft":"-613,-520",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace inst ALU_Control_0 -pg 1 -lvl 5 -x 1230 -y 100 -defaultsOSRD
+preplace inst ALU_0 -pg 1 -lvl 3 -x 660 -y 110 -defaultsOSRD
+preplace inst Branch_Unit_0 -pg 1 -lvl 4 -x 950 -y 170 -defaultsOSRD
+preplace inst ExecutionStage_0 -pg 1 -lvl 1 -x -30 -y 70 -defaultsOSRD
+preplace inst ForwardingUnitWithMUX_0 -pg 1 -lvl 2 -x 330 -y 110 -defaultsOSRD
+levelinfo -pg 1 -210 -30 330 660 950 1230 1370
+pagesize -pg 1 -db -bbox -sgen -210 -190 1370 710
+"
+}
+0

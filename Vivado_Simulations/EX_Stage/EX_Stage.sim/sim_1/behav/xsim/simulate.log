@@ -1,0 +1,74 @@
+Time resolution is 1 ps
+Time=0: rs1_data=00000000,rs2_data=00000000, alu_op=00,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=0, immediate_data=00000000, PC_ID_EX=00000000, ALUSrcA=0, is_jalr=0, alu_out=00000000, branch_taken=1, branch_addr=00000000
+Test Case 1: ADD
+Time=10000: rs1_data=00000005,rs2_data=0000000a, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=0, immediate_data=00000000, PC_ID_EX=00000000, ALUSrcA=0, is_jalr=0, alu_out=0000000f, branch_taken=0, branch_addr=00000000
+Test Case 2: ADDI
+Time=30000: rs1_data=00000005,rs2_data=0000000a, alu_op=00,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=1, immediate_data=0000000a, PC_ID_EX=00000000, ALUSrcA=0, is_jalr=0, alu_out=0000000f, branch_taken=0, branch_addr=0000000a
+Test Case 3: LUI
+Time=50000: rs1_data=00000005,rs2_data=0000000a, alu_op=11,is_sw=0, is_lw=0, is_lui=1, is_jal=0, funct3=000, funct7=0000000, alu_src=1, immediate_data=12345000, PC_ID_EX=00000000, ALUSrcA=0, is_jalr=0, alu_out=12345000, branch_taken=0, branch_addr=12345000
+Time=60000: rs1_data=00000005,rs2_data=0000000a, alu_op=11,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=1, immediate_data=12345000, PC_ID_EX=00000000, ALUSrcA=0, is_jalr=0, alu_out=12345005, branch_taken=0, branch_addr=12345000
+Test Case 4: AUIPC
+Time=70000: rs1_data=00000005,rs2_data=0000000a, alu_op=11,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=1, immediate_data=00000200, PC_ID_EX=00001000, ALUSrcA=1, is_jalr=0, alu_out=00001200, branch_taken=0, branch_addr=00001200
+Time=80000: rs1_data=00000005,rs2_data=0000000a, alu_op=11,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=1, immediate_data=00000200, PC_ID_EX=00001000, ALUSrcA=0, is_jalr=0, alu_out=00000205, branch_taken=0, branch_addr=00001200
+Test Case 5: JAL
+Time=90000: rs1_data=00000005,rs2_data=0000000a, alu_op=11,is_sw=0, is_lw=0, is_lui=0, is_jal=1, funct3=000, funct7=0000000, alu_src=1, immediate_data=00001000, PC_ID_EX=00002000, ALUSrcA=0, is_jalr=0, alu_out=00002004, branch_taken=0, branch_addr=00003000
+Time=100000: rs1_data=00000005,rs2_data=0000000a, alu_op=11,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=1, immediate_data=00001000, PC_ID_EX=00002000, ALUSrcA=0, is_jalr=0, alu_out=00001005, branch_taken=0, branch_addr=00003000
+Test Case 6: JALR
+Time=110000: rs1_data=00003001,rs2_data=0000000a, alu_op=11,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=1, immediate_data=00000020, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=1, alu_out=00004004, branch_taken=0, branch_addr=00003020
+Time=120000: rs1_data=00003001,rs2_data=0000000a, alu_op=11,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=1, immediate_data=00000020, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00003021, branch_taken=0, branch_addr=00004020
+Test Case 7: BEQ Taken
+Time=130000: rs1_data=0000000a,rs2_data=0000000a, alu_op=01,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=1, immediate_data=00000020, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=ffffffea, branch_taken=1, branch_addr=00004020
+Test Case 8: SW
+Time=150000: rs1_data=00001000,rs2_data=0000000a, alu_op=00,is_sw=1, is_lw=0, is_lui=0, is_jal=0, funct3=010, funct7=0000000, alu_src=1, immediate_data=00000040, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00001040, branch_taken=0, branch_addr=00004040
+Time=160000: rs1_data=00001000,rs2_data=0000000a, alu_op=00,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=010, funct7=0000000, alu_src=1, immediate_data=00000040, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000000, branch_taken=0, branch_addr=00004040
+Test Case 9: LW
+Time=170000: rs1_data=00002000,rs2_data=0000000a, alu_op=00,is_sw=0, is_lw=1, is_lui=0, is_jal=0, funct3=010, funct7=0000000, alu_src=1, immediate_data=00000080, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00002080, branch_taken=0, branch_addr=00004080
+Time=180000: rs1_data=00002000,rs2_data=0000000a, alu_op=00,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=010, funct7=0000000, alu_src=1, immediate_data=00000080, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000000, branch_taken=0, branch_addr=00004080
+Test Case 10: SLL
+Time=190000: rs1_data=0000000f,rs2_data=00000004, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=001, funct7=0000000, alu_src=0, immediate_data=00000080, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=000000f0, branch_taken=1, branch_addr=00004080
+Test Case 12: SUB
+Time=210000: rs1_data=0000000f,rs2_data=0000000a, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0100000, alu_src=0, immediate_data=00000080, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000005, branch_taken=0, branch_addr=00004080
+Test Case 13: AND
+Time=230000: rs1_data=ffffffff,rs2_data=aaaaaaaa, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=111, funct7=0000000, alu_src=0, immediate_data=00000080, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=aaaaaaaa, branch_taken=1, branch_addr=00004080
+Test Case 14: OR
+Time=250000: rs1_data=12345678,rs2_data=87654321, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=110, funct7=0000000, alu_src=0, immediate_data=00000080, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=97755779, branch_taken=1, branch_addr=00004080
+Test Case 15: XOR
+Time=270000: rs1_data=aaaaaaaa,rs2_data=55555555, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=100, funct7=0000000, alu_src=0, immediate_data=00000080, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=ffffffff, branch_taken=1, branch_addr=00004080
+Test Case 16: SRL
+Time=290000: rs1_data=80000000,rs2_data=00000004, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=101, funct7=0000000, alu_src=0, immediate_data=00000080, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=08000000, branch_taken=0, branch_addr=00004080
+Test Case 17: SRA
+Time=310000: rs1_data=80000000,rs2_data=00000004, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=101, funct7=0100000, alu_src=0, immediate_data=00000080, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=f8000000, branch_taken=0, branch_addr=00004080
+Test Case 18: SLT
+Time=330000: rs1_data=fffffffe,rs2_data=00000001, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=010, funct7=0000000, alu_src=0, immediate_data=00000080, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000001, branch_taken=0, branch_addr=00004080
+Test Case 19: SLTU
+Time=350000: rs1_data=ffffffff,rs2_data=00000001, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=011, funct7=0000000, alu_src=0, immediate_data=00000080, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000000, branch_taken=0, branch_addr=00004080
+Test Case 20: ANDI
+Time=370000: rs1_data=ffffffff,rs2_data=00000001, alu_op=00,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=111, funct7=0000000, alu_src=1, immediate_data=0000aaaa, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=0000aaaa, branch_taken=1, branch_addr=0000eaaa
+Test Case 21: ORI
+Time=390000: rs1_data=00001234,rs2_data=00000001, alu_op=00,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=110, funct7=0000000, alu_src=1, immediate_data=ffff0000, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=ffff1234, branch_taken=0, branch_addr=ffff4000
+Test Case 22: XORI
+Time=410000: rs1_data=aaaaaaaa,rs2_data=00000001, alu_op=00,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=100, funct7=0000000, alu_src=1, immediate_data=55555555, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=ffffffff, branch_taken=1, branch_addr=55559555
+Test Case 23: SRLI
+Time=430000: rs1_data=80000000,rs2_data=00000001, alu_op=00,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=101, funct7=0000000, alu_src=1, immediate_data=00000004, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=08000000, branch_taken=0, branch_addr=00004004
+Test Case 24: SRAI
+Time=450000: rs1_data=80000000,rs2_data=00000001, alu_op=00,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=101, funct7=0100000, alu_src=1, immediate_data=00000004, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=f8000000, branch_taken=0, branch_addr=00004004
+Test Case 25: SLTI
+Time=470000: rs1_data=fffffffe,rs2_data=00000001, alu_op=00,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=010, funct7=0100000, alu_src=1, immediate_data=00000001, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000001, branch_taken=0, branch_addr=00004001
+Test Case 26: SLTIU
+Time=490000: rs1_data=ffffffff,rs2_data=00000001, alu_op=00,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=011, funct7=0100000, alu_src=1, immediate_data=00000001, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000000, branch_taken=0, branch_addr=00004001
+Test Case 27: BNE Not Taken
+Time=510000: rs1_data=0000000a,rs2_data=0000000a, alu_op=01,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=001, funct7=0100000, alu_src=1, immediate_data=00000001, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000009, branch_taken=0, branch_addr=00004001
+Test Case 28: BLT Taken
+Time=530000: rs1_data=ffffffff,rs2_data=00000001, alu_op=01,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=100, funct7=0100000, alu_src=1, immediate_data=00000001, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=fffffffe, branch_taken=1, branch_addr=00004001
+Test Case 29: BGE Not Taken
+Time=550000: rs1_data=ffffffff,rs2_data=00000000, alu_op=01,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=101, funct7=0100000, alu_src=1, immediate_data=00000001, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=fffffffe, branch_taken=0, branch_addr=00004001
+Test Case 30: BLTU Taken
+Time=570000: rs1_data=00000001,rs2_data=ffffffff, alu_op=01,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=110, funct7=0100000, alu_src=1, immediate_data=00000001, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000000, branch_taken=1, branch_addr=00004001
+Test Case 31: BGEU Not Taken
+Time=590000: rs1_data=00000001,rs2_data=ffffffff, alu_op=01,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=111, funct7=0100000, alu_src=1, immediate_data=00000001, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000000, branch_taken=0, branch_addr=00004001
+Time=600000: rs1_data=00000001,rs2_data=ffffffff, alu_op=01,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=111, funct7=0100000, alu_src=0, immediate_data=00000001, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000002, branch_taken=0, branch_addr=00004001
+Test Case 32: MEM/WB Forwarding
+Time=610000: rs1_data=00000000,rs2_data=00000000, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=0, immediate_data=00000001, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=deadbeef, branch_taken=0, branch_addr=00004001
+Time=620000: rs1_data=00000000,rs2_data=00000000, alu_op=10,is_sw=0, is_lw=0, is_lui=0, is_jal=0, funct3=000, funct7=0000000, alu_src=0, immediate_data=00000001, PC_ID_EX=00004000, ALUSrcA=0, is_jalr=0, alu_out=00000000, branch_taken=1, branch_addr=00004001
+All RV32I test cases completed
+$finish called at time : 630 ns : File "M:/College/BTP/Vivado_Simulations/EX_Stage/ExecuteStage_tb.v" Line 527

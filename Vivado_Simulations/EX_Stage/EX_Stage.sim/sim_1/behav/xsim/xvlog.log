@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/Vivado_Simulations/EX_Stage/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/Vivado_Simulations/EX_Stage/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/Vivado_Simulations/EX_Stage/Branch_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/Vivado_Simulations/EX_Stage/Execute_Stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ExecutionStage
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/Vivado_Simulations/EX_Stage/Forwarding_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ForwardingUnitWithMUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/Vivado_Simulations/EX_Stage/ExecuteStage_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ExecutionStage_tb

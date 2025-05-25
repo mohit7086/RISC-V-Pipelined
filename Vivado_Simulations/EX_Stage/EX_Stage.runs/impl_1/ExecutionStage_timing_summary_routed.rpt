@@ -1,0 +1,1011 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Fri Mar 21 19:16:05 2025
+| Host         : Mohit running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file ExecutionStage_timing_summary_routed.rpt -pb ExecutionStage_timing_summary_routed.pb -rpx ExecutionStage_timing_summary_routed.rpx -warn_on_violation
+| Design       : ExecutionStage
+| Device       : 7k70t-fbv676
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  65          
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (65)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (130)
+5. checking no_input_delay (228)
+6. checking no_output_delay (65)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (65)
+-------------------------
+ There are 65 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (130)
+--------------------------------------------------
+ There are 130 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (228)
+--------------------------------
+ There are 228 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (65)
+--------------------------------
+ There are 65 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  195          inf        0.000                      0                  195           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           195 Endpoints
+Min Delay           195 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 MEM_WB_RegWrite_i
+                            (input port)
+  Destination:            branch_addr_reg[29]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.468ns  (logic 1.908ns (13.184%)  route 12.561ns (86.816%))
+  Logic Levels:           17  (CARRY4=7 IBUF=1 LUT4=2 LUT6=7)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 f  MEM_WB_RegWrite_i (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RegWrite_i
+    V6                   IBUF (Prop_ibuf_I_O)         0.693     0.693 f  MEM_WB_RegWrite_i_IBUF_inst/O
+                         net (fo=1, routed)           1.701     2.393    branch_unit_inst/MEM_WB_RegWrite_i_IBUF
+    SLICE_X61Y49         LUT6 (Prop_lut6_I0_O)        0.053     2.446 f  branch_unit_inst/i__carry_i_32/O
+                         net (fo=4, routed)           1.007     3.453    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X60Y50         LUT6 (Prop_lut6_I1_O)        0.053     3.506 r  branch_unit_inst/i__carry_i_28/O
+                         net (fo=32, routed)          4.454     7.960    branch_unit_inst/i__carry_i_28_n_0
+    SLICE_X1Y76          LUT6 (Prop_lut6_I1_O)        0.053     8.013 r  branch_unit_inst/i__carry__2_i_12/O
+                         net (fo=9, routed)           0.682     8.695    alu_inst/forwarded_rs1[31]
+    SLICE_X5Y81          LUT4 (Prop_lut4_I1_O)        0.053     8.748 r  alu_inst/alu_out0_carry__6_i_8/O
+                         net (fo=49, routed)          1.836    10.583    alu_inst/operandA__0[31]
+    SLICE_X14Y78         LUT6 (Prop_lut6_I1_O)        0.053    10.636 r  alu_inst/alu_out[13]_i_14/O
+                         net (fo=4, routed)           0.671    11.308    alu_inst/alu_out[13]_i_14_n_0
+    SLICE_X14Y76         LUT6 (Prop_lut6_I0_O)        0.053    11.361 r  alu_inst/alu_out[7]_i_8/O
+                         net (fo=2, routed)           0.702    12.062    alu_inst/alu_out[7]_i_8_n_0
+    SLICE_X15Y75         LUT6 (Prop_lut6_I1_O)        0.053    12.115 r  alu_inst/alu_out[6]_i_3/O
+                         net (fo=1, routed)           0.812    12.928    alu_inst/alu_out[6]_i_3_n_0
+    SLICE_X9Y74          LUT6 (Prop_lut6_I1_O)        0.053    12.981 r  alu_inst/alu_out[6]_i_2/O
+                         net (fo=2, routed)           0.696    13.677    alu_inst/raw_alu_out[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I3_O)        0.053    13.730 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000    13.730    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235    13.965 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    13.965    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.023 r  alu_inst/branch_addr_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.023    alu_inst/branch_addr_reg[11]_i_1_n_0
+    SLICE_X4Y79          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.081 r  alu_inst/branch_addr_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.081    alu_inst/branch_addr_reg[15]_i_1_n_0
+    SLICE_X4Y80          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.139 r  alu_inst/branch_addr_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.139    alu_inst/branch_addr_reg[19]_i_1_n_0
+    SLICE_X4Y81          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.197 r  alu_inst/branch_addr_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.197    alu_inst/branch_addr_reg[23]_i_1_n_0
+    SLICE_X4Y82          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.255 r  alu_inst/branch_addr_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.255    alu_inst/branch_addr_reg[27]_i_1_n_0
+    SLICE_X4Y83          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.213    14.468 r  alu_inst/branch_addr_reg[31]_i_1/O[1]
+                         net (fo=1, routed)           0.000    14.468    alu_inst_n_34
+    SLICE_X4Y83          FDCE                                         r  branch_addr_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RegWrite_i
+                            (input port)
+  Destination:            branch_addr_reg[31]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.434ns  (logic 1.874ns (12.980%)  route 12.561ns (87.020%))
+  Logic Levels:           17  (CARRY4=7 IBUF=1 LUT4=2 LUT6=7)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 f  MEM_WB_RegWrite_i (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RegWrite_i
+    V6                   IBUF (Prop_ibuf_I_O)         0.693     0.693 f  MEM_WB_RegWrite_i_IBUF_inst/O
+                         net (fo=1, routed)           1.701     2.393    branch_unit_inst/MEM_WB_RegWrite_i_IBUF
+    SLICE_X61Y49         LUT6 (Prop_lut6_I0_O)        0.053     2.446 f  branch_unit_inst/i__carry_i_32/O
+                         net (fo=4, routed)           1.007     3.453    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X60Y50         LUT6 (Prop_lut6_I1_O)        0.053     3.506 r  branch_unit_inst/i__carry_i_28/O
+                         net (fo=32, routed)          4.454     7.960    branch_unit_inst/i__carry_i_28_n_0
+    SLICE_X1Y76          LUT6 (Prop_lut6_I1_O)        0.053     8.013 r  branch_unit_inst/i__carry__2_i_12/O
+                         net (fo=9, routed)           0.682     8.695    alu_inst/forwarded_rs1[31]
+    SLICE_X5Y81          LUT4 (Prop_lut4_I1_O)        0.053     8.748 r  alu_inst/alu_out0_carry__6_i_8/O
+                         net (fo=49, routed)          1.836    10.583    alu_inst/operandA__0[31]
+    SLICE_X14Y78         LUT6 (Prop_lut6_I1_O)        0.053    10.636 r  alu_inst/alu_out[13]_i_14/O
+                         net (fo=4, routed)           0.671    11.308    alu_inst/alu_out[13]_i_14_n_0
+    SLICE_X14Y76         LUT6 (Prop_lut6_I0_O)        0.053    11.361 r  alu_inst/alu_out[7]_i_8/O
+                         net (fo=2, routed)           0.702    12.062    alu_inst/alu_out[7]_i_8_n_0
+    SLICE_X15Y75         LUT6 (Prop_lut6_I1_O)        0.053    12.115 r  alu_inst/alu_out[6]_i_3/O
+                         net (fo=1, routed)           0.812    12.928    alu_inst/alu_out[6]_i_3_n_0
+    SLICE_X9Y74          LUT6 (Prop_lut6_I1_O)        0.053    12.981 r  alu_inst/alu_out[6]_i_2/O
+                         net (fo=2, routed)           0.696    13.677    alu_inst/raw_alu_out[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I3_O)        0.053    13.730 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000    13.730    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235    13.965 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    13.965    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.023 r  alu_inst/branch_addr_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.023    alu_inst/branch_addr_reg[11]_i_1_n_0
+    SLICE_X4Y79          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.081 r  alu_inst/branch_addr_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.081    alu_inst/branch_addr_reg[15]_i_1_n_0
+    SLICE_X4Y80          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.139 r  alu_inst/branch_addr_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.139    alu_inst/branch_addr_reg[19]_i_1_n_0
+    SLICE_X4Y81          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.197 r  alu_inst/branch_addr_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.197    alu_inst/branch_addr_reg[23]_i_1_n_0
+    SLICE_X4Y82          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.255 r  alu_inst/branch_addr_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.255    alu_inst/branch_addr_reg[27]_i_1_n_0
+    SLICE_X4Y83          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179    14.434 r  alu_inst/branch_addr_reg[31]_i_1/O[3]
+                         net (fo=1, routed)           0.000    14.434    alu_inst_n_32
+    SLICE_X4Y83          FDCE                                         r  branch_addr_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RegWrite_i
+                            (input port)
+  Destination:            branch_addr_reg[25]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.410ns  (logic 1.850ns (12.835%)  route 12.561ns (87.165%))
+  Logic Levels:           16  (CARRY4=6 IBUF=1 LUT4=2 LUT6=7)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 f  MEM_WB_RegWrite_i (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RegWrite_i
+    V6                   IBUF (Prop_ibuf_I_O)         0.693     0.693 f  MEM_WB_RegWrite_i_IBUF_inst/O
+                         net (fo=1, routed)           1.701     2.393    branch_unit_inst/MEM_WB_RegWrite_i_IBUF
+    SLICE_X61Y49         LUT6 (Prop_lut6_I0_O)        0.053     2.446 f  branch_unit_inst/i__carry_i_32/O
+                         net (fo=4, routed)           1.007     3.453    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X60Y50         LUT6 (Prop_lut6_I1_O)        0.053     3.506 r  branch_unit_inst/i__carry_i_28/O
+                         net (fo=32, routed)          4.454     7.960    branch_unit_inst/i__carry_i_28_n_0
+    SLICE_X1Y76          LUT6 (Prop_lut6_I1_O)        0.053     8.013 r  branch_unit_inst/i__carry__2_i_12/O
+                         net (fo=9, routed)           0.682     8.695    alu_inst/forwarded_rs1[31]
+    SLICE_X5Y81          LUT4 (Prop_lut4_I1_O)        0.053     8.748 r  alu_inst/alu_out0_carry__6_i_8/O
+                         net (fo=49, routed)          1.836    10.583    alu_inst/operandA__0[31]
+    SLICE_X14Y78         LUT6 (Prop_lut6_I1_O)        0.053    10.636 r  alu_inst/alu_out[13]_i_14/O
+                         net (fo=4, routed)           0.671    11.308    alu_inst/alu_out[13]_i_14_n_0
+    SLICE_X14Y76         LUT6 (Prop_lut6_I0_O)        0.053    11.361 r  alu_inst/alu_out[7]_i_8/O
+                         net (fo=2, routed)           0.702    12.062    alu_inst/alu_out[7]_i_8_n_0
+    SLICE_X15Y75         LUT6 (Prop_lut6_I1_O)        0.053    12.115 r  alu_inst/alu_out[6]_i_3/O
+                         net (fo=1, routed)           0.812    12.928    alu_inst/alu_out[6]_i_3_n_0
+    SLICE_X9Y74          LUT6 (Prop_lut6_I1_O)        0.053    12.981 r  alu_inst/alu_out[6]_i_2/O
+                         net (fo=2, routed)           0.696    13.677    alu_inst/raw_alu_out[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I3_O)        0.053    13.730 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000    13.730    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235    13.965 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    13.965    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.023 r  alu_inst/branch_addr_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.023    alu_inst/branch_addr_reg[11]_i_1_n_0
+    SLICE_X4Y79          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.081 r  alu_inst/branch_addr_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.081    alu_inst/branch_addr_reg[15]_i_1_n_0
+    SLICE_X4Y80          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.139 r  alu_inst/branch_addr_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.139    alu_inst/branch_addr_reg[19]_i_1_n_0
+    SLICE_X4Y81          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.197 r  alu_inst/branch_addr_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.197    alu_inst/branch_addr_reg[23]_i_1_n_0
+    SLICE_X4Y82          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.213    14.410 r  alu_inst/branch_addr_reg[27]_i_1/O[1]
+                         net (fo=1, routed)           0.000    14.410    alu_inst_n_38
+    SLICE_X4Y82          FDCE                                         r  branch_addr_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RegWrite_i
+                            (input port)
+  Destination:            branch_addr_reg[28]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.394ns  (logic 1.834ns (12.738%)  route 12.561ns (87.262%))
+  Logic Levels:           17  (CARRY4=7 IBUF=1 LUT4=2 LUT6=7)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 f  MEM_WB_RegWrite_i (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RegWrite_i
+    V6                   IBUF (Prop_ibuf_I_O)         0.693     0.693 f  MEM_WB_RegWrite_i_IBUF_inst/O
+                         net (fo=1, routed)           1.701     2.393    branch_unit_inst/MEM_WB_RegWrite_i_IBUF
+    SLICE_X61Y49         LUT6 (Prop_lut6_I0_O)        0.053     2.446 f  branch_unit_inst/i__carry_i_32/O
+                         net (fo=4, routed)           1.007     3.453    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X60Y50         LUT6 (Prop_lut6_I1_O)        0.053     3.506 r  branch_unit_inst/i__carry_i_28/O
+                         net (fo=32, routed)          4.454     7.960    branch_unit_inst/i__carry_i_28_n_0
+    SLICE_X1Y76          LUT6 (Prop_lut6_I1_O)        0.053     8.013 r  branch_unit_inst/i__carry__2_i_12/O
+                         net (fo=9, routed)           0.682     8.695    alu_inst/forwarded_rs1[31]
+    SLICE_X5Y81          LUT4 (Prop_lut4_I1_O)        0.053     8.748 r  alu_inst/alu_out0_carry__6_i_8/O
+                         net (fo=49, routed)          1.836    10.583    alu_inst/operandA__0[31]
+    SLICE_X14Y78         LUT6 (Prop_lut6_I1_O)        0.053    10.636 r  alu_inst/alu_out[13]_i_14/O
+                         net (fo=4, routed)           0.671    11.308    alu_inst/alu_out[13]_i_14_n_0
+    SLICE_X14Y76         LUT6 (Prop_lut6_I0_O)        0.053    11.361 r  alu_inst/alu_out[7]_i_8/O
+                         net (fo=2, routed)           0.702    12.062    alu_inst/alu_out[7]_i_8_n_0
+    SLICE_X15Y75         LUT6 (Prop_lut6_I1_O)        0.053    12.115 r  alu_inst/alu_out[6]_i_3/O
+                         net (fo=1, routed)           0.812    12.928    alu_inst/alu_out[6]_i_3_n_0
+    SLICE_X9Y74          LUT6 (Prop_lut6_I1_O)        0.053    12.981 r  alu_inst/alu_out[6]_i_2/O
+                         net (fo=2, routed)           0.696    13.677    alu_inst/raw_alu_out[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I3_O)        0.053    13.730 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000    13.730    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235    13.965 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    13.965    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.023 r  alu_inst/branch_addr_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.023    alu_inst/branch_addr_reg[11]_i_1_n_0
+    SLICE_X4Y79          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.081 r  alu_inst/branch_addr_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.081    alu_inst/branch_addr_reg[15]_i_1_n_0
+    SLICE_X4Y80          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.139 r  alu_inst/branch_addr_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.139    alu_inst/branch_addr_reg[19]_i_1_n_0
+    SLICE_X4Y81          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.197 r  alu_inst/branch_addr_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.197    alu_inst/branch_addr_reg[23]_i_1_n_0
+    SLICE_X4Y82          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.255 r  alu_inst/branch_addr_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.255    alu_inst/branch_addr_reg[27]_i_1_n_0
+    SLICE_X4Y83          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.139    14.394 r  alu_inst/branch_addr_reg[31]_i_1/O[0]
+                         net (fo=1, routed)           0.000    14.394    alu_inst_n_35
+    SLICE_X4Y83          FDCE                                         r  branch_addr_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RegWrite_i
+                            (input port)
+  Destination:            branch_addr_reg[30]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.391ns  (logic 1.831ns (12.720%)  route 12.561ns (87.280%))
+  Logic Levels:           17  (CARRY4=7 IBUF=1 LUT4=2 LUT6=7)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 f  MEM_WB_RegWrite_i (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RegWrite_i
+    V6                   IBUF (Prop_ibuf_I_O)         0.693     0.693 f  MEM_WB_RegWrite_i_IBUF_inst/O
+                         net (fo=1, routed)           1.701     2.393    branch_unit_inst/MEM_WB_RegWrite_i_IBUF
+    SLICE_X61Y49         LUT6 (Prop_lut6_I0_O)        0.053     2.446 f  branch_unit_inst/i__carry_i_32/O
+                         net (fo=4, routed)           1.007     3.453    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X60Y50         LUT6 (Prop_lut6_I1_O)        0.053     3.506 r  branch_unit_inst/i__carry_i_28/O
+                         net (fo=32, routed)          4.454     7.960    branch_unit_inst/i__carry_i_28_n_0
+    SLICE_X1Y76          LUT6 (Prop_lut6_I1_O)        0.053     8.013 r  branch_unit_inst/i__carry__2_i_12/O
+                         net (fo=9, routed)           0.682     8.695    alu_inst/forwarded_rs1[31]
+    SLICE_X5Y81          LUT4 (Prop_lut4_I1_O)        0.053     8.748 r  alu_inst/alu_out0_carry__6_i_8/O
+                         net (fo=49, routed)          1.836    10.583    alu_inst/operandA__0[31]
+    SLICE_X14Y78         LUT6 (Prop_lut6_I1_O)        0.053    10.636 r  alu_inst/alu_out[13]_i_14/O
+                         net (fo=4, routed)           0.671    11.308    alu_inst/alu_out[13]_i_14_n_0
+    SLICE_X14Y76         LUT6 (Prop_lut6_I0_O)        0.053    11.361 r  alu_inst/alu_out[7]_i_8/O
+                         net (fo=2, routed)           0.702    12.062    alu_inst/alu_out[7]_i_8_n_0
+    SLICE_X15Y75         LUT6 (Prop_lut6_I1_O)        0.053    12.115 r  alu_inst/alu_out[6]_i_3/O
+                         net (fo=1, routed)           0.812    12.928    alu_inst/alu_out[6]_i_3_n_0
+    SLICE_X9Y74          LUT6 (Prop_lut6_I1_O)        0.053    12.981 r  alu_inst/alu_out[6]_i_2/O
+                         net (fo=2, routed)           0.696    13.677    alu_inst/raw_alu_out[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I3_O)        0.053    13.730 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000    13.730    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235    13.965 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    13.965    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.023 r  alu_inst/branch_addr_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.023    alu_inst/branch_addr_reg[11]_i_1_n_0
+    SLICE_X4Y79          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.081 r  alu_inst/branch_addr_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.081    alu_inst/branch_addr_reg[15]_i_1_n_0
+    SLICE_X4Y80          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.139 r  alu_inst/branch_addr_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.139    alu_inst/branch_addr_reg[19]_i_1_n_0
+    SLICE_X4Y81          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.197 r  alu_inst/branch_addr_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.197    alu_inst/branch_addr_reg[23]_i_1_n_0
+    SLICE_X4Y82          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.255 r  alu_inst/branch_addr_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.255    alu_inst/branch_addr_reg[27]_i_1_n_0
+    SLICE_X4Y83          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136    14.391 r  alu_inst/branch_addr_reg[31]_i_1/O[2]
+                         net (fo=1, routed)           0.000    14.391    alu_inst_n_33
+    SLICE_X4Y83          FDCE                                         r  branch_addr_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RegWrite_i
+                            (input port)
+  Destination:            branch_addr_reg[27]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.376ns  (logic 1.816ns (12.629%)  route 12.561ns (87.371%))
+  Logic Levels:           16  (CARRY4=6 IBUF=1 LUT4=2 LUT6=7)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 f  MEM_WB_RegWrite_i (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RegWrite_i
+    V6                   IBUF (Prop_ibuf_I_O)         0.693     0.693 f  MEM_WB_RegWrite_i_IBUF_inst/O
+                         net (fo=1, routed)           1.701     2.393    branch_unit_inst/MEM_WB_RegWrite_i_IBUF
+    SLICE_X61Y49         LUT6 (Prop_lut6_I0_O)        0.053     2.446 f  branch_unit_inst/i__carry_i_32/O
+                         net (fo=4, routed)           1.007     3.453    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X60Y50         LUT6 (Prop_lut6_I1_O)        0.053     3.506 r  branch_unit_inst/i__carry_i_28/O
+                         net (fo=32, routed)          4.454     7.960    branch_unit_inst/i__carry_i_28_n_0
+    SLICE_X1Y76          LUT6 (Prop_lut6_I1_O)        0.053     8.013 r  branch_unit_inst/i__carry__2_i_12/O
+                         net (fo=9, routed)           0.682     8.695    alu_inst/forwarded_rs1[31]
+    SLICE_X5Y81          LUT4 (Prop_lut4_I1_O)        0.053     8.748 r  alu_inst/alu_out0_carry__6_i_8/O
+                         net (fo=49, routed)          1.836    10.583    alu_inst/operandA__0[31]
+    SLICE_X14Y78         LUT6 (Prop_lut6_I1_O)        0.053    10.636 r  alu_inst/alu_out[13]_i_14/O
+                         net (fo=4, routed)           0.671    11.308    alu_inst/alu_out[13]_i_14_n_0
+    SLICE_X14Y76         LUT6 (Prop_lut6_I0_O)        0.053    11.361 r  alu_inst/alu_out[7]_i_8/O
+                         net (fo=2, routed)           0.702    12.062    alu_inst/alu_out[7]_i_8_n_0
+    SLICE_X15Y75         LUT6 (Prop_lut6_I1_O)        0.053    12.115 r  alu_inst/alu_out[6]_i_3/O
+                         net (fo=1, routed)           0.812    12.928    alu_inst/alu_out[6]_i_3_n_0
+    SLICE_X9Y74          LUT6 (Prop_lut6_I1_O)        0.053    12.981 r  alu_inst/alu_out[6]_i_2/O
+                         net (fo=2, routed)           0.696    13.677    alu_inst/raw_alu_out[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I3_O)        0.053    13.730 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000    13.730    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235    13.965 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    13.965    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.023 r  alu_inst/branch_addr_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.023    alu_inst/branch_addr_reg[11]_i_1_n_0
+    SLICE_X4Y79          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.081 r  alu_inst/branch_addr_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.081    alu_inst/branch_addr_reg[15]_i_1_n_0
+    SLICE_X4Y80          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.139 r  alu_inst/branch_addr_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.139    alu_inst/branch_addr_reg[19]_i_1_n_0
+    SLICE_X4Y81          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.197 r  alu_inst/branch_addr_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.197    alu_inst/branch_addr_reg[23]_i_1_n_0
+    SLICE_X4Y82          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179    14.376 r  alu_inst/branch_addr_reg[27]_i_1/O[3]
+                         net (fo=1, routed)           0.000    14.376    alu_inst_n_36
+    SLICE_X4Y82          FDCE                                         r  branch_addr_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RegWrite_i
+                            (input port)
+  Destination:            branch_addr_reg[21]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.352ns  (logic 1.792ns (12.483%)  route 12.561ns (87.517%))
+  Logic Levels:           15  (CARRY4=5 IBUF=1 LUT4=2 LUT6=7)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 f  MEM_WB_RegWrite_i (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RegWrite_i
+    V6                   IBUF (Prop_ibuf_I_O)         0.693     0.693 f  MEM_WB_RegWrite_i_IBUF_inst/O
+                         net (fo=1, routed)           1.701     2.393    branch_unit_inst/MEM_WB_RegWrite_i_IBUF
+    SLICE_X61Y49         LUT6 (Prop_lut6_I0_O)        0.053     2.446 f  branch_unit_inst/i__carry_i_32/O
+                         net (fo=4, routed)           1.007     3.453    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X60Y50         LUT6 (Prop_lut6_I1_O)        0.053     3.506 r  branch_unit_inst/i__carry_i_28/O
+                         net (fo=32, routed)          4.454     7.960    branch_unit_inst/i__carry_i_28_n_0
+    SLICE_X1Y76          LUT6 (Prop_lut6_I1_O)        0.053     8.013 r  branch_unit_inst/i__carry__2_i_12/O
+                         net (fo=9, routed)           0.682     8.695    alu_inst/forwarded_rs1[31]
+    SLICE_X5Y81          LUT4 (Prop_lut4_I1_O)        0.053     8.748 r  alu_inst/alu_out0_carry__6_i_8/O
+                         net (fo=49, routed)          1.836    10.583    alu_inst/operandA__0[31]
+    SLICE_X14Y78         LUT6 (Prop_lut6_I1_O)        0.053    10.636 r  alu_inst/alu_out[13]_i_14/O
+                         net (fo=4, routed)           0.671    11.308    alu_inst/alu_out[13]_i_14_n_0
+    SLICE_X14Y76         LUT6 (Prop_lut6_I0_O)        0.053    11.361 r  alu_inst/alu_out[7]_i_8/O
+                         net (fo=2, routed)           0.702    12.062    alu_inst/alu_out[7]_i_8_n_0
+    SLICE_X15Y75         LUT6 (Prop_lut6_I1_O)        0.053    12.115 r  alu_inst/alu_out[6]_i_3/O
+                         net (fo=1, routed)           0.812    12.928    alu_inst/alu_out[6]_i_3_n_0
+    SLICE_X9Y74          LUT6 (Prop_lut6_I1_O)        0.053    12.981 r  alu_inst/alu_out[6]_i_2/O
+                         net (fo=2, routed)           0.696    13.677    alu_inst/raw_alu_out[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I3_O)        0.053    13.730 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000    13.730    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235    13.965 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    13.965    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.023 r  alu_inst/branch_addr_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.023    alu_inst/branch_addr_reg[11]_i_1_n_0
+    SLICE_X4Y79          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.081 r  alu_inst/branch_addr_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.081    alu_inst/branch_addr_reg[15]_i_1_n_0
+    SLICE_X4Y80          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.139 r  alu_inst/branch_addr_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.139    alu_inst/branch_addr_reg[19]_i_1_n_0
+    SLICE_X4Y81          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.213    14.352 r  alu_inst/branch_addr_reg[23]_i_1/O[1]
+                         net (fo=1, routed)           0.000    14.352    alu_inst_n_42
+    SLICE_X4Y81          FDCE                                         r  branch_addr_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RegWrite_i
+                            (input port)
+  Destination:            branch_addr_reg[24]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.336ns  (logic 1.776ns (12.385%)  route 12.561ns (87.615%))
+  Logic Levels:           16  (CARRY4=6 IBUF=1 LUT4=2 LUT6=7)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 f  MEM_WB_RegWrite_i (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RegWrite_i
+    V6                   IBUF (Prop_ibuf_I_O)         0.693     0.693 f  MEM_WB_RegWrite_i_IBUF_inst/O
+                         net (fo=1, routed)           1.701     2.393    branch_unit_inst/MEM_WB_RegWrite_i_IBUF
+    SLICE_X61Y49         LUT6 (Prop_lut6_I0_O)        0.053     2.446 f  branch_unit_inst/i__carry_i_32/O
+                         net (fo=4, routed)           1.007     3.453    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X60Y50         LUT6 (Prop_lut6_I1_O)        0.053     3.506 r  branch_unit_inst/i__carry_i_28/O
+                         net (fo=32, routed)          4.454     7.960    branch_unit_inst/i__carry_i_28_n_0
+    SLICE_X1Y76          LUT6 (Prop_lut6_I1_O)        0.053     8.013 r  branch_unit_inst/i__carry__2_i_12/O
+                         net (fo=9, routed)           0.682     8.695    alu_inst/forwarded_rs1[31]
+    SLICE_X5Y81          LUT4 (Prop_lut4_I1_O)        0.053     8.748 r  alu_inst/alu_out0_carry__6_i_8/O
+                         net (fo=49, routed)          1.836    10.583    alu_inst/operandA__0[31]
+    SLICE_X14Y78         LUT6 (Prop_lut6_I1_O)        0.053    10.636 r  alu_inst/alu_out[13]_i_14/O
+                         net (fo=4, routed)           0.671    11.308    alu_inst/alu_out[13]_i_14_n_0
+    SLICE_X14Y76         LUT6 (Prop_lut6_I0_O)        0.053    11.361 r  alu_inst/alu_out[7]_i_8/O
+                         net (fo=2, routed)           0.702    12.062    alu_inst/alu_out[7]_i_8_n_0
+    SLICE_X15Y75         LUT6 (Prop_lut6_I1_O)        0.053    12.115 r  alu_inst/alu_out[6]_i_3/O
+                         net (fo=1, routed)           0.812    12.928    alu_inst/alu_out[6]_i_3_n_0
+    SLICE_X9Y74          LUT6 (Prop_lut6_I1_O)        0.053    12.981 r  alu_inst/alu_out[6]_i_2/O
+                         net (fo=2, routed)           0.696    13.677    alu_inst/raw_alu_out[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I3_O)        0.053    13.730 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000    13.730    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235    13.965 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    13.965    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.023 r  alu_inst/branch_addr_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.023    alu_inst/branch_addr_reg[11]_i_1_n_0
+    SLICE_X4Y79          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.081 r  alu_inst/branch_addr_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.081    alu_inst/branch_addr_reg[15]_i_1_n_0
+    SLICE_X4Y80          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.139 r  alu_inst/branch_addr_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.139    alu_inst/branch_addr_reg[19]_i_1_n_0
+    SLICE_X4Y81          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.197 r  alu_inst/branch_addr_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.197    alu_inst/branch_addr_reg[23]_i_1_n_0
+    SLICE_X4Y82          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.139    14.336 r  alu_inst/branch_addr_reg[27]_i_1/O[0]
+                         net (fo=1, routed)           0.000    14.336    alu_inst_n_39
+    SLICE_X4Y82          FDCE                                         r  branch_addr_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RegWrite_i
+                            (input port)
+  Destination:            branch_addr_reg[26]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.333ns  (logic 1.773ns (12.367%)  route 12.561ns (87.633%))
+  Logic Levels:           16  (CARRY4=6 IBUF=1 LUT4=2 LUT6=7)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 f  MEM_WB_RegWrite_i (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RegWrite_i
+    V6                   IBUF (Prop_ibuf_I_O)         0.693     0.693 f  MEM_WB_RegWrite_i_IBUF_inst/O
+                         net (fo=1, routed)           1.701     2.393    branch_unit_inst/MEM_WB_RegWrite_i_IBUF
+    SLICE_X61Y49         LUT6 (Prop_lut6_I0_O)        0.053     2.446 f  branch_unit_inst/i__carry_i_32/O
+                         net (fo=4, routed)           1.007     3.453    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X60Y50         LUT6 (Prop_lut6_I1_O)        0.053     3.506 r  branch_unit_inst/i__carry_i_28/O
+                         net (fo=32, routed)          4.454     7.960    branch_unit_inst/i__carry_i_28_n_0
+    SLICE_X1Y76          LUT6 (Prop_lut6_I1_O)        0.053     8.013 r  branch_unit_inst/i__carry__2_i_12/O
+                         net (fo=9, routed)           0.682     8.695    alu_inst/forwarded_rs1[31]
+    SLICE_X5Y81          LUT4 (Prop_lut4_I1_O)        0.053     8.748 r  alu_inst/alu_out0_carry__6_i_8/O
+                         net (fo=49, routed)          1.836    10.583    alu_inst/operandA__0[31]
+    SLICE_X14Y78         LUT6 (Prop_lut6_I1_O)        0.053    10.636 r  alu_inst/alu_out[13]_i_14/O
+                         net (fo=4, routed)           0.671    11.308    alu_inst/alu_out[13]_i_14_n_0
+    SLICE_X14Y76         LUT6 (Prop_lut6_I0_O)        0.053    11.361 r  alu_inst/alu_out[7]_i_8/O
+                         net (fo=2, routed)           0.702    12.062    alu_inst/alu_out[7]_i_8_n_0
+    SLICE_X15Y75         LUT6 (Prop_lut6_I1_O)        0.053    12.115 r  alu_inst/alu_out[6]_i_3/O
+                         net (fo=1, routed)           0.812    12.928    alu_inst/alu_out[6]_i_3_n_0
+    SLICE_X9Y74          LUT6 (Prop_lut6_I1_O)        0.053    12.981 r  alu_inst/alu_out[6]_i_2/O
+                         net (fo=2, routed)           0.696    13.677    alu_inst/raw_alu_out[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I3_O)        0.053    13.730 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000    13.730    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235    13.965 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    13.965    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.023 r  alu_inst/branch_addr_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.023    alu_inst/branch_addr_reg[11]_i_1_n_0
+    SLICE_X4Y79          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.081 r  alu_inst/branch_addr_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.081    alu_inst/branch_addr_reg[15]_i_1_n_0
+    SLICE_X4Y80          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.139 r  alu_inst/branch_addr_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.139    alu_inst/branch_addr_reg[19]_i_1_n_0
+    SLICE_X4Y81          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.197 r  alu_inst/branch_addr_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.197    alu_inst/branch_addr_reg[23]_i_1_n_0
+    SLICE_X4Y82          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136    14.333 r  alu_inst/branch_addr_reg[27]_i_1/O[2]
+                         net (fo=1, routed)           0.000    14.333    alu_inst_n_37
+    SLICE_X4Y82          FDCE                                         r  branch_addr_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RegWrite_i
+                            (input port)
+  Destination:            branch_addr_reg[23]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.318ns  (logic 1.758ns (12.275%)  route 12.561ns (87.725%))
+  Logic Levels:           15  (CARRY4=5 IBUF=1 LUT4=2 LUT6=7)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 f  MEM_WB_RegWrite_i (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RegWrite_i
+    V6                   IBUF (Prop_ibuf_I_O)         0.693     0.693 f  MEM_WB_RegWrite_i_IBUF_inst/O
+                         net (fo=1, routed)           1.701     2.393    branch_unit_inst/MEM_WB_RegWrite_i_IBUF
+    SLICE_X61Y49         LUT6 (Prop_lut6_I0_O)        0.053     2.446 f  branch_unit_inst/i__carry_i_32/O
+                         net (fo=4, routed)           1.007     3.453    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X60Y50         LUT6 (Prop_lut6_I1_O)        0.053     3.506 r  branch_unit_inst/i__carry_i_28/O
+                         net (fo=32, routed)          4.454     7.960    branch_unit_inst/i__carry_i_28_n_0
+    SLICE_X1Y76          LUT6 (Prop_lut6_I1_O)        0.053     8.013 r  branch_unit_inst/i__carry__2_i_12/O
+                         net (fo=9, routed)           0.682     8.695    alu_inst/forwarded_rs1[31]
+    SLICE_X5Y81          LUT4 (Prop_lut4_I1_O)        0.053     8.748 r  alu_inst/alu_out0_carry__6_i_8/O
+                         net (fo=49, routed)          1.836    10.583    alu_inst/operandA__0[31]
+    SLICE_X14Y78         LUT6 (Prop_lut6_I1_O)        0.053    10.636 r  alu_inst/alu_out[13]_i_14/O
+                         net (fo=4, routed)           0.671    11.308    alu_inst/alu_out[13]_i_14_n_0
+    SLICE_X14Y76         LUT6 (Prop_lut6_I0_O)        0.053    11.361 r  alu_inst/alu_out[7]_i_8/O
+                         net (fo=2, routed)           0.702    12.062    alu_inst/alu_out[7]_i_8_n_0
+    SLICE_X15Y75         LUT6 (Prop_lut6_I1_O)        0.053    12.115 r  alu_inst/alu_out[6]_i_3/O
+                         net (fo=1, routed)           0.812    12.928    alu_inst/alu_out[6]_i_3_n_0
+    SLICE_X9Y74          LUT6 (Prop_lut6_I1_O)        0.053    12.981 r  alu_inst/alu_out[6]_i_2/O
+                         net (fo=2, routed)           0.696    13.677    alu_inst/raw_alu_out[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I3_O)        0.053    13.730 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000    13.730    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235    13.965 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    13.965    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.023 r  alu_inst/branch_addr_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.023    alu_inst/branch_addr_reg[11]_i_1_n_0
+    SLICE_X4Y79          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.081 r  alu_inst/branch_addr_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.081    alu_inst/branch_addr_reg[15]_i_1_n_0
+    SLICE_X4Y80          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058    14.139 r  alu_inst/branch_addr_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    14.139    alu_inst/branch_addr_reg[19]_i_1_n_0
+    SLICE_X4Y81          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179    14.318 r  alu_inst/branch_addr_reg[23]_i_1/O[3]
+                         net (fo=1, routed)           0.000    14.318    alu_inst_n_40
+    SLICE_X4Y81          FDCE                                         r  branch_addr_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 PC_ID_EX[0]
+                            (input port)
+  Destination:            alu_out_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.605ns  (logic 0.073ns (12.096%)  route 0.532ns (87.904%))
+  Logic Levels:           2  (IBUF=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    M16                                               0.000     0.000 r  PC_ID_EX[0] (IN)
+                         net (fo=0)                   0.000     0.000    PC_ID_EX[0]
+    M16                  IBUF (Prop_ibuf_I_O)         0.045     0.045 r  PC_ID_EX_IBUF[0]_inst/O
+                         net (fo=3, routed)           0.532     0.577    alu_inst/PC_ID_EX_IBUF[0]
+    SLICE_X5Y84          LUT6 (Prop_lut6_I1_O)        0.028     0.605 r  alu_inst/alu_out[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.605    alu_out_comb[0]
+    SLICE_X5Y84          FDCE                                         r  alu_out_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 PC_ID_EX[6]
+                            (input port)
+  Destination:            branch_addr_reg[6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.954ns  (logic 0.167ns (17.520%)  route 0.787ns (82.480%))
+  Logic Levels:           3  (CARRY4=1 IBUF=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    K16                                               0.000     0.000 r  PC_ID_EX[6] (IN)
+                         net (fo=0)                   0.000     0.000    PC_ID_EX[6]
+    K16                  IBUF (Prop_ibuf_I_O)         0.088     0.088 r  PC_ID_EX_IBUF[6]_inst/O
+                         net (fo=3, routed)           0.787     0.875    alu_inst/PC_ID_EX_IBUF[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I1_O)        0.028     0.903 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000     0.903    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.051     0.954 r  alu_inst/branch_addr_reg[7]_i_1/O[2]
+                         net (fo=1, routed)           0.000     0.954    alu_inst_n_57
+    SLICE_X4Y77          FDCE                                         r  branch_addr_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 PC_ID_EX[6]
+                            (input port)
+  Destination:            branch_addr_reg[7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.978ns  (logic 0.191ns (19.543%)  route 0.787ns (80.457%))
+  Logic Levels:           3  (CARRY4=1 IBUF=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    K16                                               0.000     0.000 r  PC_ID_EX[6] (IN)
+                         net (fo=0)                   0.000     0.000    PC_ID_EX[6]
+    K16                  IBUF (Prop_ibuf_I_O)         0.088     0.088 r  PC_ID_EX_IBUF[6]_inst/O
+                         net (fo=3, routed)           0.787     0.875    alu_inst/PC_ID_EX_IBUF[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I1_O)        0.028     0.903 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000     0.903    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.075     0.978 r  alu_inst/branch_addr_reg[7]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.978    alu_inst_n_56
+    SLICE_X4Y77          FDCE                                         r  branch_addr_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 PC_ID_EX[0]
+                            (input port)
+  Destination:            branch_addr_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.987ns  (logic 0.128ns (12.994%)  route 0.858ns (87.006%))
+  Logic Levels:           3  (CARRY4=1 IBUF=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    M16                                               0.000     0.000 r  PC_ID_EX[0] (IN)
+                         net (fo=0)                   0.000     0.000    PC_ID_EX[0]
+    M16                  IBUF (Prop_ibuf_I_O)         0.045     0.045 r  PC_ID_EX_IBUF[0]_inst/O
+                         net (fo=3, routed)           0.858     0.904    alu_inst/PC_ID_EX_IBUF[0]
+    SLICE_X4Y76          LUT3 (Prop_lut3_I2_O)        0.028     0.932 r  alu_inst/branch_addr[3]_i_9/O
+                         net (fo=1, routed)           0.000     0.932    alu_inst/branch_addr[3]_i_9_n_0
+    SLICE_X4Y76          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.055     0.987 r  alu_inst/branch_addr_reg[3]_i_1/O[0]
+                         net (fo=1, routed)           0.000     0.987    alu_inst_n_63
+    SLICE_X4Y76          FDCE                                         r  branch_addr_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 PC_ID_EX[0]
+                            (input port)
+  Destination:            branch_addr_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.014ns  (logic 0.155ns (15.311%)  route 0.858ns (84.689%))
+  Logic Levels:           3  (CARRY4=1 IBUF=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    M16                                               0.000     0.000 r  PC_ID_EX[0] (IN)
+                         net (fo=0)                   0.000     0.000    PC_ID_EX[0]
+    M16                  IBUF (Prop_ibuf_I_O)         0.045     0.045 r  PC_ID_EX_IBUF[0]_inst/O
+                         net (fo=3, routed)           0.858     0.904    alu_inst/PC_ID_EX_IBUF[0]
+    SLICE_X4Y76          LUT3 (Prop_lut3_I2_O)        0.028     0.932 r  alu_inst/branch_addr[3]_i_9/O
+                         net (fo=1, routed)           0.000     0.932    alu_inst/branch_addr[3]_i_9_n_0
+    SLICE_X4Y76          CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.082     1.014 r  alu_inst/branch_addr_reg[3]_i_1/O[1]
+                         net (fo=1, routed)           0.000     1.014    alu_inst_n_62
+    SLICE_X4Y76          FDCE                                         r  branch_addr_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 PC_ID_EX[6]
+                            (input port)
+  Destination:            branch_addr_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.029ns  (logic 0.242ns (23.530%)  route 0.787ns (76.470%))
+  Logic Levels:           4  (CARRY4=2 IBUF=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    K16                                               0.000     0.000 r  PC_ID_EX[6] (IN)
+                         net (fo=0)                   0.000     0.000    PC_ID_EX[6]
+    K16                  IBUF (Prop_ibuf_I_O)         0.088     0.088 r  PC_ID_EX_IBUF[6]_inst/O
+                         net (fo=3, routed)           0.787     0.875    alu_inst/PC_ID_EX_IBUF[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I1_O)        0.028     0.903 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000     0.903    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.085     0.988 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     0.988    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.041     1.029 r  alu_inst/branch_addr_reg[11]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.029    alu_inst_n_55
+    SLICE_X4Y78          FDCE                                         r  branch_addr_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 PC_ID_EX[2]
+                            (input port)
+  Destination:            alu_out_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.035ns  (logic 0.220ns (21.241%)  route 0.815ns (78.759%))
+  Logic Levels:           4  (CARRY4=1 IBUF=1 LUT1=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    L17                                               0.000     0.000 f  PC_ID_EX[2] (IN)
+                         net (fo=0)                   0.000     0.000    PC_ID_EX[2]
+    L17                  IBUF (Prop_ibuf_I_O)         0.077     0.077 f  PC_ID_EX_IBUF[2]_inst/O
+                         net (fo=4, routed)           0.705     0.782    alu_inst/PC_ID_EX_IBUF[2]
+    SLICE_X1Y78          LUT1 (Prop_lut1_I0_O)        0.028     0.810 r  alu_inst/alu_out[4]_i_4/O
+                         net (fo=1, routed)           0.000     0.810    alu_inst/alu_out[4]_i_4_n_0
+    SLICE_X1Y78          CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.049     0.859 r  alu_inst/alu_out_reg[4]_i_2/O[1]
+                         net (fo=1, routed)           0.110     0.969    alu_inst/PC_plus_4[2]
+    SLICE_X0Y78          LUT4 (Prop_lut4_I0_O)        0.066     1.035 r  alu_inst/alu_out[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.035    alu_out_comb[2]
+    SLICE_X0Y78          FDCE                                         r  alu_out_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 PC_ID_EX[10]
+                            (input port)
+  Destination:            branch_addr_reg[10]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.040ns  (logic 0.157ns (15.059%)  route 0.883ns (84.941%))
+  Logic Levels:           3  (CARRY4=1 IBUF=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    J18                                               0.000     0.000 r  PC_ID_EX[10] (IN)
+                         net (fo=0)                   0.000     0.000    PC_ID_EX[10]
+    J18                  IBUF (Prop_ibuf_I_O)         0.078     0.078 r  PC_ID_EX_IBUF[10]_inst/O
+                         net (fo=3, routed)           0.883     0.961    alu_inst/PC_ID_EX_IBUF[10]
+    SLICE_X4Y78          LUT4 (Prop_lut4_I1_O)        0.028     0.989 r  alu_inst/branch_addr[11]_i_7/O
+                         net (fo=1, routed)           0.000     0.989    alu_inst/branch_addr[11]_i_7_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.051     1.040 r  alu_inst/branch_addr_reg[11]_i_1/O[2]
+                         net (fo=1, routed)           0.000     1.040    alu_inst_n_53
+    SLICE_X4Y78          FDCE                                         r  branch_addr_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 PC_ID_EX[17]
+                            (input port)
+  Destination:            branch_addr_reg[17]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.044ns  (logic 0.170ns (16.285%)  route 0.874ns (83.715%))
+  Logic Levels:           3  (CARRY4=1 IBUF=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    F20                                               0.000     0.000 r  PC_ID_EX[17] (IN)
+                         net (fo=0)                   0.000     0.000    PC_ID_EX[17]
+    F20                  IBUF (Prop_ibuf_I_O)         0.093     0.093 r  PC_ID_EX_IBUF[17]_inst/O
+                         net (fo=3, routed)           0.874     0.967    alu_inst/PC_ID_EX_IBUF[17]
+    SLICE_X4Y80          LUT6 (Prop_lut6_I1_O)        0.028     0.995 r  alu_inst/branch_addr[19]_i_8/O
+                         net (fo=1, routed)           0.000     0.995    alu_inst/branch_addr[19]_i_8_n_0
+    SLICE_X4Y80          CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.049     1.044 r  alu_inst/branch_addr_reg[19]_i_1/O[1]
+                         net (fo=1, routed)           0.000     1.044    alu_inst_n_46
+    SLICE_X4Y80          FDCE                                         r  branch_addr_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 PC_ID_EX[6]
+                            (input port)
+  Destination:            branch_addr_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.048ns  (logic 0.261ns (24.915%)  route 0.787ns (75.085%))
+  Logic Levels:           4  (CARRY4=2 IBUF=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    K16                                               0.000     0.000 r  PC_ID_EX[6] (IN)
+                         net (fo=0)                   0.000     0.000    PC_ID_EX[6]
+    K16                  IBUF (Prop_ibuf_I_O)         0.088     0.088 r  PC_ID_EX_IBUF[6]_inst/O
+                         net (fo=3, routed)           0.787     0.875    alu_inst/PC_ID_EX_IBUF[6]
+    SLICE_X4Y77          LUT4 (Prop_lut4_I1_O)        0.028     0.903 r  alu_inst/branch_addr[7]_i_7/O
+                         net (fo=1, routed)           0.000     0.903    alu_inst/branch_addr[7]_i_7_n_0
+    SLICE_X4Y77          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.085     0.988 r  alu_inst/branch_addr_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     0.988    alu_inst/branch_addr_reg[7]_i_1_n_0
+    SLICE_X4Y78          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.060     1.048 r  alu_inst/branch_addr_reg[11]_i_1/O[1]
+                         net (fo=1, routed)           0.000     1.048    alu_inst_n_54
+    SLICE_X4Y78          FDCE                                         r  branch_addr_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

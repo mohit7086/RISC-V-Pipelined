@@ -1,0 +1,46 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "EX_ALU_0_0",
+    "cell_name": "ALU_0",
+    "component_reference": "xilinx.com:module_ref:ALU:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../EX_Stage.gen/sources_1/bd/EX/ip/EX_ALU_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "EX_ALU_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "kintex7" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7k70t" } ],
+        "PACKAGE": [ { "value": "fbv676" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../EX_Stage.gen/sources_1/bd/EX/ip/EX_ALU_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2024.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "a": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "b": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "alu_ctrl": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
+        "alu_out": [ { "direction": "out", "size_left": "31", "size_right": "0" } ]
+      }
+    }
+  }
+}

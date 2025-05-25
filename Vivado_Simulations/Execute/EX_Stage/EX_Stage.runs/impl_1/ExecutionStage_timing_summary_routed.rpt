@@ -1,0 +1,856 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Tue May  6 19:58:16 2025
+| Host         : Mohit running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file ExecutionStage_timing_summary_routed.rpt -pb ExecutionStage_timing_summary_routed.pb -rpx ExecutionStage_timing_summary_routed.rpx -warn_on_violation
+| Design       : ExecutionStage
+| Device       : 7k160ti-fbv676
+| Speed File   : -2L  PRODUCTION 1.12 2017-02-17
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  100          inf        0.000                      0                  100           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           100 Endpoints
+Min Delay           100 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 MEM_WB_RD_i[1]
+                            (input port)
+  Destination:            flush_fetch
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        22.388ns  (logic 3.887ns (17.361%)  route 18.501ns (82.639%))
+  Logic Levels:           15  (CARRY4=2 IBUF=1 LUT3=2 LUT4=3 LUT6=6 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    F15                                               0.000     0.000 r  MEM_WB_RD_i[1] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RD_i[1]
+    F15                  IBUF (Prop_ibuf_I_O)         0.785     0.785 r  MEM_WB_RD_i_IBUF[1]_inst/O
+                         net (fo=3, routed)           3.629     4.414    branch_unit_inst/MEM_WB_RD_i_IBUF[1]
+    SLICE_X0Y46          LUT4 (Prop_lut4_I2_O)        0.043     4.457 f  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_5/O
+                         net (fo=2, routed)           0.323     4.779    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_5_n_0
+    SLICE_X0Y47          LUT6 (Prop_lut6_I0_O)        0.043     4.822 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_2/O
+                         net (fo=32, routed)          1.616     6.438    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_10_0
+    SLICE_X0Y84          LUT6 (Prop_lut6_I1_O)        0.043     6.481 r  branch_unit_inst/rs2_mem_data_OBUF[3]_inst_i_1/O
+                         net (fo=11, routed)          0.653     7.134    alu_inst/rs2_mem_data_OBUF[3]
+    SLICE_X7Y85          LUT3 (Prop_lut3_I2_O)        0.043     7.177 r  alu_inst/alu_out0_carry_i_9/O
+                         net (fo=94, routed)          2.126     9.303    alu_inst/operandB[3]
+    SLICE_X18Y83         LUT4 (Prop_lut4_I2_O)        0.043     9.346 r  alu_inst/alu_out_OBUF[20]_inst_i_18/O
+                         net (fo=5, routed)           0.914    10.259    alu_inst/alu_out_OBUF[20]_inst_i_18_n_0
+    SLICE_X6Y82          LUT6 (Prop_lut6_I1_O)        0.043    10.302 r  alu_inst/alu_out_OBUF[14]_inst_i_13/O
+                         net (fo=1, routed)           0.668    10.970    alu_inst/alu_out_OBUF[14]_inst_i_13_n_0
+    SLICE_X11Y82         LUT6 (Prop_lut6_I3_O)        0.043    11.013 r  alu_inst/alu_out_OBUF[14]_inst_i_6/O
+                         net (fo=1, routed)           0.531    11.544    alu_inst/alu_out_OBUF[14]_inst_i_6_n_0
+    SLICE_X13Y83         LUT6 (Prop_lut6_I5_O)        0.043    11.587 r  alu_inst/alu_out_OBUF[14]_inst_i_2/O
+                         net (fo=2, routed)           0.331    11.918    alu_inst/raw_alu_out[14]
+    SLICE_X18Y83         LUT3 (Prop_lut3_I0_O)        0.047    11.965 r  alu_inst/branch_addr_OBUF[14]_inst_i_1/O
+                         net (fo=2, routed)           4.084    16.049    alu_inst/branch_addr_OBUF[14]
+    SLICE_X109Y33        LUT6 (Prop_lut6_I4_O)        0.134    16.183 r  alu_inst/flush_fetch_OBUF_inst_i_11/O
+                         net (fo=1, routed)           0.000    16.183    alu_inst/flush_fetch_OBUF_inst_i_11_n_0
+    SLICE_X109Y33        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.259    16.442 r  alu_inst/flush_fetch_OBUF_inst_i_3/CO[3]
+                         net (fo=1, routed)           0.000    16.442    alu_inst/flush_fetch_OBUF_inst_i_3_n_0
+    SLICE_X109Y34        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.110    16.552 r  alu_inst/flush_fetch_OBUF_inst_i_2/CO[2]
+                         net (fo=1, routed)           1.533    18.085    alu_inst/target_mismatch0
+    SLICE_X64Y52         LUT4 (Prop_lut4_I0_O)        0.129    18.214 r  alu_inst/flush_fetch_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.094    20.308    flush_fetch_OBUF
+    AE17                 OBUF (Prop_obuf_I_O)         2.079    22.388 r  flush_fetch_OBUF_inst/O
+                         net (fo=0)                   0.000    22.388    flush_fetch
+    AE17                                                              r  flush_fetch (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RD_i[1]
+                            (input port)
+  Destination:            branch_addr[22]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        18.107ns  (logic 3.258ns (17.994%)  route 14.848ns (82.006%))
+  Logic Levels:           11  (IBUF=1 LUT3=2 LUT4=1 LUT6=6 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    F15                                               0.000     0.000 r  MEM_WB_RD_i[1] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RD_i[1]
+    F15                  IBUF (Prop_ibuf_I_O)         0.785     0.785 r  MEM_WB_RD_i_IBUF[1]_inst/O
+                         net (fo=3, routed)           2.306     3.091    branch_unit_inst/MEM_WB_RD_i_IBUF[1]
+    SLICE_X0Y102         LUT6 (Prop_lut6_I1_O)        0.043     3.134 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_6/O
+                         net (fo=4, routed)           1.666     4.800    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X0Y47          LUT6 (Prop_lut6_I1_O)        0.043     4.843 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_3/O
+                         net (fo=32, routed)          1.639     6.482    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_10_1
+    SLICE_X1Y84          LUT6 (Prop_lut6_I3_O)        0.043     6.525 r  branch_unit_inst/rs2_mem_data_OBUF[2]_inst_i_1/O
+                         net (fo=10, routed)          0.690     7.214    alu_inst/rs2_mem_data_OBUF[2]
+    SLICE_X7Y86          LUT3 (Prop_lut3_I2_O)        0.043     7.257 r  alu_inst/alu_out0_carry_i_10/O
+                         net (fo=115, routed)         2.258     9.516    alu_inst/operandB[2]
+    SLICE_X20Y83         LUT6 (Prop_lut6_I1_O)        0.043     9.559 r  alu_inst/alu_out_OBUF[25]_inst_i_15/O
+                         net (fo=4, routed)           0.442    10.001    alu_inst/alu_out_OBUF[25]_inst_i_15_n_0
+    SLICE_X20Y82         LUT4 (Prop_lut4_I3_O)        0.043    10.044 r  alu_inst/alu_out_OBUF[22]_inst_i_10/O
+                         net (fo=1, routed)           0.348    10.392    alu_inst/alu_out_OBUF[22]_inst_i_10_n_0
+    SLICE_X21Y82         LUT6 (Prop_lut6_I2_O)        0.043    10.435 r  alu_inst/alu_out_OBUF[22]_inst_i_3/O
+                         net (fo=1, routed)           0.672    11.107    alu_inst/alu_out_OBUF[22]_inst_i_3_n_0
+    SLICE_X15Y86         LUT6 (Prop_lut6_I1_O)        0.043    11.150 r  alu_inst/alu_out_OBUF[22]_inst_i_2/O
+                         net (fo=2, routed)           0.431    11.581    alu_inst/raw_alu_out[22]
+    SLICE_X15Y87         LUT3 (Prop_lut3_I0_O)        0.051    11.632 r  alu_inst/branch_addr_OBUF[22]_inst_i_1/O
+                         net (fo=2, routed)           4.396    16.028    branch_addr_OBUF[22]
+    AA14                 OBUF (Prop_obuf_I_O)         2.079    18.107 r  branch_addr_OBUF[22]_inst/O
+                         net (fo=0)                   0.000    18.107    branch_addr[22]
+    AA14                                                              r  branch_addr[22] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RD_i[1]
+                            (input port)
+  Destination:            branch_addr[23]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        17.902ns  (logic 3.407ns (19.034%)  route 14.495ns (80.966%))
+  Logic Levels:           11  (IBUF=1 LUT3=2 LUT4=1 LUT6=6 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    F15                                               0.000     0.000 r  MEM_WB_RD_i[1] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RD_i[1]
+    F15                  IBUF (Prop_ibuf_I_O)         0.785     0.785 r  MEM_WB_RD_i_IBUF[1]_inst/O
+                         net (fo=3, routed)           2.306     3.091    branch_unit_inst/MEM_WB_RD_i_IBUF[1]
+    SLICE_X0Y102         LUT6 (Prop_lut6_I1_O)        0.043     3.134 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_6/O
+                         net (fo=4, routed)           1.666     4.800    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X0Y47          LUT6 (Prop_lut6_I1_O)        0.043     4.843 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_3/O
+                         net (fo=32, routed)          1.639     6.482    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_10_1
+    SLICE_X1Y84          LUT6 (Prop_lut6_I3_O)        0.043     6.525 r  branch_unit_inst/rs2_mem_data_OBUF[2]_inst_i_1/O
+                         net (fo=10, routed)          0.690     7.214    alu_inst/rs2_mem_data_OBUF[2]
+    SLICE_X7Y86          LUT3 (Prop_lut3_I2_O)        0.043     7.257 r  alu_inst/alu_out0_carry_i_10/O
+                         net (fo=115, routed)         2.258     9.516    alu_inst/operandB[2]
+    SLICE_X20Y83         LUT6 (Prop_lut6_I1_O)        0.043     9.559 r  alu_inst/alu_out_OBUF[25]_inst_i_15/O
+                         net (fo=4, routed)           0.442    10.001    alu_inst/alu_out_OBUF[25]_inst_i_15_n_0
+    SLICE_X20Y82         LUT4 (Prop_lut4_I2_O)        0.051    10.052 r  alu_inst/alu_out_OBUF[23]_inst_i_11/O
+                         net (fo=1, routed)           0.326    10.378    alu_inst/alu_out_OBUF[23]_inst_i_11_n_0
+    SLICE_X20Y83         LUT6 (Prop_lut6_I4_O)        0.138    10.516 r  alu_inst/alu_out_OBUF[23]_inst_i_3/O
+                         net (fo=1, routed)           0.638    11.154    alu_inst/alu_out_OBUF[23]_inst_i_3_n_0
+    SLICE_X14Y85         LUT6 (Prop_lut6_I1_O)        0.043    11.197 r  alu_inst/alu_out_OBUF[23]_inst_i_2/O
+                         net (fo=2, routed)           0.371    11.568    alu_inst/raw_alu_out[23]
+    SLICE_X14Y87         LUT3 (Prop_lut3_I0_O)        0.051    11.619 r  alu_inst/branch_addr_OBUF[23]_inst_i_1/O
+                         net (fo=2, routed)           4.158    15.777    branch_addr_OBUF[23]
+    AE16                 OBUF (Prop_obuf_I_O)         2.125    17.902 r  branch_addr_OBUF[23]_inst/O
+                         net (fo=0)                   0.000    17.902    branch_addr[23]
+    AE16                                                              r  branch_addr[23] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RD_i[1]
+                            (input port)
+  Destination:            branch_addr[21]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        17.802ns  (logic 3.254ns (18.282%)  route 14.547ns (81.718%))
+  Logic Levels:           11  (IBUF=1 LUT3=2 LUT6=7 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    F15                                               0.000     0.000 r  MEM_WB_RD_i[1] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RD_i[1]
+    F15                  IBUF (Prop_ibuf_I_O)         0.785     0.785 r  MEM_WB_RD_i_IBUF[1]_inst/O
+                         net (fo=3, routed)           2.306     3.091    branch_unit_inst/MEM_WB_RD_i_IBUF[1]
+    SLICE_X0Y102         LUT6 (Prop_lut6_I1_O)        0.043     3.134 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_6/O
+                         net (fo=4, routed)           1.666     4.800    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X0Y47          LUT6 (Prop_lut6_I1_O)        0.043     4.843 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_3/O
+                         net (fo=32, routed)          1.639     6.482    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_10_1
+    SLICE_X1Y84          LUT6 (Prop_lut6_I3_O)        0.043     6.525 r  branch_unit_inst/rs2_mem_data_OBUF[2]_inst_i_1/O
+                         net (fo=10, routed)          0.690     7.214    alu_inst/rs2_mem_data_OBUF[2]
+    SLICE_X7Y86          LUT3 (Prop_lut3_I2_O)        0.043     7.257 r  alu_inst/alu_out0_carry_i_10/O
+                         net (fo=115, routed)         2.028     9.286    alu_inst/operandB[2]
+    SLICE_X20Y82         LUT6 (Prop_lut6_I1_O)        0.043     9.329 r  alu_inst/alu_out_OBUF[23]_inst_i_15/O
+                         net (fo=4, routed)           0.552     9.881    alu_inst/alu_out_OBUF[23]_inst_i_15_n_0
+    SLICE_X20Y81         LUT6 (Prop_lut6_I4_O)        0.043     9.924 r  alu_inst/alu_out_OBUF[21]_inst_i_11/O
+                         net (fo=1, routed)           0.532    10.456    alu_inst/alu_out_OBUF[21]_inst_i_11_n_0
+    SLICE_X20Y82         LUT6 (Prop_lut6_I4_O)        0.043    10.499 r  alu_inst/alu_out_OBUF[21]_inst_i_3/O
+                         net (fo=1, routed)           0.705    11.204    alu_inst/alu_out_OBUF[21]_inst_i_3_n_0
+    SLICE_X14Y86         LUT6 (Prop_lut6_I1_O)        0.043    11.247 r  alu_inst/alu_out_OBUF[21]_inst_i_2/O
+                         net (fo=2, routed)           0.244    11.491    alu_inst/raw_alu_out[21]
+    SLICE_X14Y86         LUT3 (Prop_lut3_I0_O)        0.051    11.542 r  alu_inst/branch_addr_OBUF[21]_inst_i_1/O
+                         net (fo=2, routed)           4.185    15.727    branch_addr_OBUF[21]
+    AA15                 OBUF (Prop_obuf_I_O)         2.075    17.802 r  branch_addr_OBUF[21]_inst/O
+                         net (fo=0)                   0.000    17.802    branch_addr[21]
+    AA15                                                              r  branch_addr[21] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RD_i[1]
+                            (input port)
+  Destination:            branch_addr[26]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        17.536ns  (logic 3.230ns (18.421%)  route 14.306ns (81.579%))
+  Logic Levels:           11  (IBUF=1 LUT3=2 LUT5=2 LUT6=5 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    F15                                               0.000     0.000 r  MEM_WB_RD_i[1] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RD_i[1]
+    F15                  IBUF (Prop_ibuf_I_O)         0.785     0.785 r  MEM_WB_RD_i_IBUF[1]_inst/O
+                         net (fo=3, routed)           2.306     3.091    branch_unit_inst/MEM_WB_RD_i_IBUF[1]
+    SLICE_X0Y102         LUT6 (Prop_lut6_I1_O)        0.043     3.134 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_6/O
+                         net (fo=4, routed)           1.666     4.800    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X0Y47          LUT6 (Prop_lut6_I1_O)        0.043     4.843 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_3/O
+                         net (fo=32, routed)          1.639     6.482    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_10_1
+    SLICE_X1Y84          LUT6 (Prop_lut6_I3_O)        0.043     6.525 r  branch_unit_inst/rs2_mem_data_OBUF[2]_inst_i_1/O
+                         net (fo=10, routed)          0.690     7.214    alu_inst/rs2_mem_data_OBUF[2]
+    SLICE_X7Y86          LUT3 (Prop_lut3_I2_O)        0.043     7.257 r  alu_inst/alu_out0_carry_i_10/O
+                         net (fo=115, routed)         2.240     9.498    alu_inst/operandB[2]
+    SLICE_X21Y84         LUT5 (Prop_lut5_I4_O)        0.043     9.541 r  alu_inst/alu_out_OBUF[25]_inst_i_14/O
+                         net (fo=3, routed)           0.470    10.011    alu_inst/alu_out_OBUF[25]_inst_i_14_n_0
+    SLICE_X21Y85         LUT3 (Prop_lut3_I2_O)        0.043    10.054 r  alu_inst/branch_addr_OBUF[27]_inst_i_16/O
+                         net (fo=2, routed)           0.368    10.422    alu_inst/branch_addr_OBUF[27]_inst_i_16_n_0
+    SLICE_X20Y85         LUT6 (Prop_lut6_I1_O)        0.043    10.465 r  alu_inst/branch_addr_OBUF[26]_inst_i_6/O
+                         net (fo=2, routed)           0.540    11.005    alu_inst/branch_addr_OBUF[26]_inst_i_6_n_0
+    SLICE_X19Y86         LUT6 (Prop_lut6_I4_O)        0.043    11.048 r  alu_inst/branch_addr_OBUF[26]_inst_i_2/O
+                         net (fo=1, routed)           0.354    11.402    alu_inst/branch_addr_OBUF[26]_inst_i_2_n_0
+    SLICE_X18Y86         LUT5 (Prop_lut5_I0_O)        0.043    11.445 r  alu_inst/branch_addr_OBUF[26]_inst_i_1/O
+                         net (fo=2, routed)           4.032    15.477    branch_addr_OBUF[26]
+    AF19                 OBUF (Prop_obuf_I_O)         2.059    17.536 r  branch_addr_OBUF[26]_inst/O
+                         net (fo=0)                   0.000    17.536    branch_addr[26]
+    AF19                                                              r  branch_addr[26] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RD_i[1]
+                            (input port)
+  Destination:            alu_out[14]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        17.503ns  (logic 3.180ns (18.171%)  route 14.323ns (81.829%))
+  Logic Levels:           11  (IBUF=1 LUT3=1 LUT4=3 LUT6=5 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    F15                                               0.000     0.000 r  MEM_WB_RD_i[1] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RD_i[1]
+    F15                  IBUF (Prop_ibuf_I_O)         0.785     0.785 r  MEM_WB_RD_i_IBUF[1]_inst/O
+                         net (fo=3, routed)           3.629     4.414    branch_unit_inst/MEM_WB_RD_i_IBUF[1]
+    SLICE_X0Y46          LUT4 (Prop_lut4_I2_O)        0.043     4.457 f  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_5/O
+                         net (fo=2, routed)           0.323     4.779    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_5_n_0
+    SLICE_X0Y47          LUT6 (Prop_lut6_I0_O)        0.043     4.822 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_2/O
+                         net (fo=32, routed)          1.616     6.438    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_10_0
+    SLICE_X0Y84          LUT6 (Prop_lut6_I1_O)        0.043     6.481 r  branch_unit_inst/rs2_mem_data_OBUF[3]_inst_i_1/O
+                         net (fo=11, routed)          0.653     7.134    alu_inst/rs2_mem_data_OBUF[3]
+    SLICE_X7Y85          LUT3 (Prop_lut3_I2_O)        0.043     7.177 r  alu_inst/alu_out0_carry_i_9/O
+                         net (fo=94, routed)          2.126     9.303    alu_inst/operandB[3]
+    SLICE_X18Y83         LUT4 (Prop_lut4_I2_O)        0.043     9.346 r  alu_inst/alu_out_OBUF[20]_inst_i_18/O
+                         net (fo=5, routed)           0.914    10.259    alu_inst/alu_out_OBUF[20]_inst_i_18_n_0
+    SLICE_X6Y82          LUT6 (Prop_lut6_I1_O)        0.043    10.302 r  alu_inst/alu_out_OBUF[14]_inst_i_13/O
+                         net (fo=1, routed)           0.668    10.970    alu_inst/alu_out_OBUF[14]_inst_i_13_n_0
+    SLICE_X11Y82         LUT6 (Prop_lut6_I3_O)        0.043    11.013 r  alu_inst/alu_out_OBUF[14]_inst_i_6/O
+                         net (fo=1, routed)           0.531    11.544    alu_inst/alu_out_OBUF[14]_inst_i_6_n_0
+    SLICE_X13Y83         LUT6 (Prop_lut6_I5_O)        0.043    11.587 r  alu_inst/alu_out_OBUF[14]_inst_i_2/O
+                         net (fo=2, routed)           0.331    11.918    alu_inst/raw_alu_out[14]
+    SLICE_X18Y83         LUT4 (Prop_lut4_I3_O)        0.043    11.961 r  alu_inst/alu_out_OBUF[14]_inst_i_1/O
+                         net (fo=1, routed)           3.533    15.494    alu_out_OBUF[14]
+    Y13                  OBUF (Prop_obuf_I_O)         2.009    17.503 r  alu_out_OBUF[14]_inst/O
+                         net (fo=0)                   0.000    17.503    alu_out[14]
+    Y13                                                               r  alu_out[14] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RD_i[1]
+                            (input port)
+  Destination:            branch_addr[24]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        17.446ns  (logic 3.406ns (19.522%)  route 14.040ns (80.478%))
+  Logic Levels:           11  (IBUF=1 LUT3=2 LUT4=1 LUT5=1 LUT6=5 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    F15                                               0.000     0.000 r  MEM_WB_RD_i[1] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RD_i[1]
+    F15                  IBUF (Prop_ibuf_I_O)         0.785     0.785 r  MEM_WB_RD_i_IBUF[1]_inst/O
+                         net (fo=3, routed)           3.629     4.414    branch_unit_inst/MEM_WB_RD_i_IBUF[1]
+    SLICE_X0Y46          LUT4 (Prop_lut4_I2_O)        0.043     4.457 f  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_5/O
+                         net (fo=2, routed)           0.323     4.779    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_5_n_0
+    SLICE_X0Y47          LUT6 (Prop_lut6_I0_O)        0.043     4.822 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_2/O
+                         net (fo=32, routed)          1.616     6.438    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_10_0
+    SLICE_X0Y84          LUT6 (Prop_lut6_I1_O)        0.043     6.481 r  branch_unit_inst/rs2_mem_data_OBUF[3]_inst_i_1/O
+                         net (fo=11, routed)          0.653     7.134    alu_inst/rs2_mem_data_OBUF[3]
+    SLICE_X7Y85          LUT3 (Prop_lut3_I2_O)        0.043     7.177 r  alu_inst/alu_out0_carry_i_9/O
+                         net (fo=94, routed)          2.126     9.303    alu_inst/operandB[3]
+    SLICE_X18Y83         LUT5 (Prop_lut5_I1_O)        0.051     9.354 r  alu_inst/branch_addr_OBUF[28]_inst_i_10/O
+                         net (fo=4, routed)           0.579     9.933    alu_inst/branch_addr_OBUF[28]_inst_i_10_n_0
+    SLICE_X16Y84         LUT6 (Prop_lut6_I1_O)        0.138    10.071 r  alu_inst/alu_out_OBUF[24]_inst_i_13/O
+                         net (fo=2, routed)           0.360    10.431    alu_inst/alu_out_OBUF[24]_inst_i_13_n_0
+    SLICE_X15Y86         LUT6 (Prop_lut6_I2_O)        0.043    10.474 r  alu_inst/alu_out_OBUF[24]_inst_i_7/O
+                         net (fo=1, routed)           0.533    11.007    alu_inst/alu_out_OBUF[24]_inst_i_7_n_0
+    SLICE_X16Y86         LUT6 (Prop_lut6_I4_O)        0.043    11.050 r  alu_inst/alu_out_OBUF[24]_inst_i_3/O
+                         net (fo=2, routed)           0.246    11.296    alu_inst/raw_alu_out[24]
+    SLICE_X16Y86         LUT3 (Prop_lut3_I0_O)        0.047    11.343 r  alu_inst/branch_addr_OBUF[24]_inst_i_1/O
+                         net (fo=2, routed)           3.976    15.318    branch_addr_OBUF[24]
+    AD16                 OBUF (Prop_obuf_I_O)         2.127    17.446 r  branch_addr_OBUF[24]_inst/O
+                         net (fo=0)                   0.000    17.446    branch_addr[24]
+    AD16                                                              r  branch_addr[24] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RD_i[1]
+                            (input port)
+  Destination:            branch_addr[20]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        17.412ns  (logic 3.290ns (18.895%)  route 14.122ns (81.105%))
+  Logic Levels:           11  (IBUF=1 LUT3=2 LUT6=7 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    F15                                               0.000     0.000 r  MEM_WB_RD_i[1] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RD_i[1]
+    F15                  IBUF (Prop_ibuf_I_O)         0.785     0.785 r  MEM_WB_RD_i_IBUF[1]_inst/O
+                         net (fo=3, routed)           2.306     3.091    branch_unit_inst/MEM_WB_RD_i_IBUF[1]
+    SLICE_X0Y102         LUT6 (Prop_lut6_I1_O)        0.043     3.134 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_6/O
+                         net (fo=4, routed)           1.666     4.800    branch_unit_inst/FU_inst/p_4_in
+    SLICE_X0Y47          LUT6 (Prop_lut6_I1_O)        0.043     4.843 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_3/O
+                         net (fo=32, routed)          1.639     6.482    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_10_1
+    SLICE_X1Y84          LUT6 (Prop_lut6_I3_O)        0.043     6.525 r  branch_unit_inst/rs2_mem_data_OBUF[2]_inst_i_1/O
+                         net (fo=10, routed)          0.690     7.214    alu_inst/rs2_mem_data_OBUF[2]
+    SLICE_X7Y86          LUT3 (Prop_lut3_I2_O)        0.043     7.257 r  alu_inst/alu_out0_carry_i_10/O
+                         net (fo=115, routed)         2.028     9.286    alu_inst/operandB[2]
+    SLICE_X20Y82         LUT6 (Prop_lut6_I1_O)        0.043     9.329 r  alu_inst/alu_out_OBUF[23]_inst_i_15/O
+                         net (fo=4, routed)           0.661     9.989    alu_inst/alu_out_OBUF[23]_inst_i_15_n_0
+    SLICE_X20Y81         LUT6 (Prop_lut6_I5_O)        0.043    10.032 r  alu_inst/alu_out_OBUF[20]_inst_i_11/O
+                         net (fo=1, routed)           0.348    10.381    alu_inst/alu_out_OBUF[20]_inst_i_11_n_0
+    SLICE_X21Y81         LUT6 (Prop_lut6_I2_O)        0.043    10.424 r  alu_inst/alu_out_OBUF[20]_inst_i_4/O
+                         net (fo=1, routed)           0.558    10.982    alu_inst/alu_out_OBUF[20]_inst_i_4_n_0
+    SLICE_X16Y83         LUT6 (Prop_lut6_I1_O)        0.043    11.025 r  alu_inst/alu_out_OBUF[20]_inst_i_3/O
+                         net (fo=2, routed)           0.439    11.464    alu_inst/raw_alu_out[20]
+    SLICE_X17Y82         LUT3 (Prop_lut3_I0_O)        0.054    11.518 r  alu_inst/branch_addr_OBUF[20]_inst_i_1/O
+                         net (fo=2, routed)           3.787    15.304    branch_addr_OBUF[20]
+    AC14                 OBUF (Prop_obuf_I_O)         2.107    17.412 r  branch_addr_OBUF[20]_inst/O
+                         net (fo=0)                   0.000    17.412    branch_addr[20]
+    AC14                                                              r  branch_addr[20] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RD_i[1]
+                            (input port)
+  Destination:            branch_addr[14]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        17.383ns  (logic 3.249ns (18.689%)  route 14.134ns (81.311%))
+  Logic Levels:           11  (IBUF=1 LUT3=2 LUT4=2 LUT6=5 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    F15                                               0.000     0.000 r  MEM_WB_RD_i[1] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RD_i[1]
+    F15                  IBUF (Prop_ibuf_I_O)         0.785     0.785 r  MEM_WB_RD_i_IBUF[1]_inst/O
+                         net (fo=3, routed)           3.629     4.414    branch_unit_inst/MEM_WB_RD_i_IBUF[1]
+    SLICE_X0Y46          LUT4 (Prop_lut4_I2_O)        0.043     4.457 f  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_5/O
+                         net (fo=2, routed)           0.323     4.779    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_5_n_0
+    SLICE_X0Y47          LUT6 (Prop_lut6_I0_O)        0.043     4.822 r  branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_2/O
+                         net (fo=32, routed)          1.616     6.438    branch_unit_inst/rs2_mem_data_OBUF[31]_inst_i_10_0
+    SLICE_X0Y84          LUT6 (Prop_lut6_I1_O)        0.043     6.481 r  branch_unit_inst/rs2_mem_data_OBUF[3]_inst_i_1/O
+                         net (fo=11, routed)          0.653     7.134    alu_inst/rs2_mem_data_OBUF[3]
+    SLICE_X7Y85          LUT3 (Prop_lut3_I2_O)        0.043     7.177 r  alu_inst/alu_out0_carry_i_9/O
+                         net (fo=94, routed)          2.126     9.303    alu_inst/operandB[3]
+    SLICE_X18Y83         LUT4 (Prop_lut4_I2_O)        0.043     9.346 r  alu_inst/alu_out_OBUF[20]_inst_i_18/O
+                         net (fo=5, routed)           0.914    10.259    alu_inst/alu_out_OBUF[20]_inst_i_18_n_0
+    SLICE_X6Y82          LUT6 (Prop_lut6_I1_O)        0.043    10.302 r  alu_inst/alu_out_OBUF[14]_inst_i_13/O
+                         net (fo=1, routed)           0.668    10.970    alu_inst/alu_out_OBUF[14]_inst_i_13_n_0
+    SLICE_X11Y82         LUT6 (Prop_lut6_I3_O)        0.043    11.013 r  alu_inst/alu_out_OBUF[14]_inst_i_6/O
+                         net (fo=1, routed)           0.531    11.544    alu_inst/alu_out_OBUF[14]_inst_i_6_n_0
+    SLICE_X13Y83         LUT6 (Prop_lut6_I5_O)        0.043    11.587 r  alu_inst/alu_out_OBUF[14]_inst_i_2/O
+                         net (fo=2, routed)           0.331    11.918    alu_inst/raw_alu_out[14]
+    SLICE_X18Y83         LUT3 (Prop_lut3_I0_O)        0.047    11.965 r  alu_inst/branch_addr_OBUF[14]_inst_i_1/O
+                         net (fo=2, routed)           3.345    15.310    branch_addr_OBUF[14]
+    V8                   OBUF (Prop_obuf_I_O)         2.073    17.383 r  branch_addr_OBUF[14]_inst/O
+                         net (fo=0)                   0.000    17.383    branch_addr[14]
+    V8                                                                r  branch_addr[14] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_RD_i[3]
+                            (input port)
+  Destination:            alu_out[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        17.367ns  (logic 3.170ns (18.254%)  route 14.197ns (81.746%))
+  Logic Levels:           11  (IBUF=1 LUT4=2 LUT5=1 LUT6=6 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    G16                                               0.000     0.000 r  MEM_WB_RD_i[3] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_RD_i[3]
+    G16                  IBUF (Prop_ibuf_I_O)         0.750     0.750 r  MEM_WB_RD_i_IBUF[3]_inst/O
+                         net (fo=3, routed)           3.766     4.516    branch_unit_inst/MEM_WB_RD_i_IBUF[3]
+    SLICE_X0Y47          LUT6 (Prop_lut6_I3_O)        0.043     4.559 f  branch_unit_inst/i__carry_i_21/O
+                         net (fo=2, routed)           0.290     4.849    branch_unit_inst/i__carry_i_21_n_0
+    SLICE_X0Y48          LUT6 (Prop_lut6_I2_O)        0.043     4.892 r  branch_unit_inst/i__carry_i_17/O
+                         net (fo=32, routed)          2.253     7.145    branch_unit_inst/i__carry_i_17_n_0
+    SLICE_X1Y88          LUT6 (Prop_lut6_I1_O)        0.043     7.188 r  branch_unit_inst/i__carry__2_i_12/O
+                         net (fo=9, routed)           0.430     7.619    alu_inst/forwarded_rs1[29]
+    SLICE_X9Y88          LUT4 (Prop_lut4_I1_O)        0.043     7.662 r  alu_inst/alu_out0_carry__6_i_2/O
+                         net (fo=25, routed)          1.641     9.302    alu_inst/operandA[29]
+    SLICE_X18Y80         LUT5 (Prop_lut5_I2_O)        0.043     9.345 r  alu_inst/alu_out_OBUF[13]_inst_i_13/O
+                         net (fo=4, routed)           0.638     9.983    alu_inst/alu_out_OBUF[13]_inst_i_13_n_0
+    SLICE_X17Y79         LUT6 (Prop_lut6_I0_O)        0.043    10.026 r  alu_inst/alu_out_OBUF[7]_inst_i_7/O
+                         net (fo=2, routed)           0.381    10.407    alu_inst/alu_out_OBUF[7]_inst_i_7_n_0
+    SLICE_X14Y78         LUT6 (Prop_lut6_I4_O)        0.043    10.450 r  alu_inst/alu_out_OBUF[7]_inst_i_3/O
+                         net (fo=1, routed)           0.624    11.074    alu_inst/alu_out_OBUF[7]_inst_i_3_n_0
+    SLICE_X6Y79          LUT6 (Prop_lut6_I1_O)        0.043    11.117 r  alu_inst/alu_out_OBUF[7]_inst_i_2/O
+                         net (fo=2, routed)           0.578    11.695    alu_inst/raw_alu_out[7]
+    SLICE_X10Y79         LUT4 (Prop_lut4_I3_O)        0.043    11.738 r  alu_inst/alu_out_OBUF[7]_inst_i_1/O
+                         net (fo=1, routed)           3.596    15.334    alu_out_OBUF[7]
+    AF12                 OBUF (Prop_obuf_I_O)         2.033    17.367 r  alu_out_OBUF[7]_inst/O
+                         net (fo=0)                   0.000    17.367    alu_out[7]
+    AF12                                                              r  alu_out[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 MEM_WB_i[3]
+                            (input port)
+  Destination:            rs2_mem_data[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.353ns  (logic 1.376ns (58.468%)  route 0.977ns (41.532%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T17                                               0.000     0.000 r  MEM_WB_i[3] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_i[3]
+    T17                  IBUF (Prop_ibuf_I_O)         0.070     0.070 r  MEM_WB_i_IBUF[3]_inst/O
+                         net (fo=2, routed)           0.644     0.714    branch_unit_inst/MEM_WB_i_IBUF[3]
+    SLICE_X0Y84          LUT6 (Prop_lut6_I2_O)        0.028     0.742 r  branch_unit_inst/rs2_mem_data_OBUF[3]_inst_i_1/O
+                         net (fo=11, routed)          0.333     1.075    rs2_mem_data_OBUF[3]
+    M20                  OBUF (Prop_obuf_I_O)         1.278     2.353 r  rs2_mem_data_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     2.353    rs2_mem_data[3]
+    M20                                                               r  rs2_mem_data[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_i[0]
+                            (input port)
+  Destination:            rs2_mem_data[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.415ns  (logic 1.372ns (56.790%)  route 1.044ns (43.210%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U16                                               0.000     0.000 r  MEM_WB_i[0] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_i[0]
+    U16                  IBUF (Prop_ibuf_I_O)         0.065     0.065 r  MEM_WB_i_IBUF[0]_inst/O
+                         net (fo=2, routed)           0.717     0.782    branch_unit_inst/MEM_WB_i_IBUF[0]
+    SLICE_X0Y83          LUT6 (Prop_lut6_I2_O)        0.028     0.810 r  branch_unit_inst/rs2_mem_data_OBUF[0]_inst_i_1/O
+                         net (fo=10, routed)          0.327     1.137    rs2_mem_data_OBUF[0]
+    P19                  OBUF (Prop_obuf_I_O)         1.278     2.415 r  rs2_mem_data_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     2.415    rs2_mem_data[0]
+    P19                                                               r  rs2_mem_data[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_i[8]
+                            (input port)
+  Destination:            rs2_mem_data[8]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.440ns  (logic 1.401ns (57.393%)  route 1.040ns (42.607%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R16                                               0.000     0.000 r  MEM_WB_i[8] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_i[8]
+    R16                  IBUF (Prop_ibuf_I_O)         0.068     0.068 r  MEM_WB_i_IBUF[8]_inst/O
+                         net (fo=2, routed)           0.631     0.699    branch_unit_inst/MEM_WB_i_IBUF[8]
+    SLICE_X0Y85          LUT6 (Prop_lut6_I2_O)        0.028     0.727 r  branch_unit_inst/rs2_mem_data_OBUF[8]_inst_i_1/O
+                         net (fo=10, routed)          0.408     1.136    rs2_mem_data_OBUF[8]
+    N26                  OBUF (Prop_obuf_I_O)         1.305     2.440 r  rs2_mem_data_OBUF[8]_inst/O
+                         net (fo=0)                   0.000     2.440    rs2_mem_data[8]
+    N26                                                               r  rs2_mem_data[8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_i[13]
+                            (input port)
+  Destination:            rs2_mem_data[13]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.486ns  (logic 1.410ns (56.689%)  route 1.077ns (43.311%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U20                                               0.000     0.000 r  MEM_WB_i[13] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_i[13]
+    U20                  IBUF (Prop_ibuf_I_O)         0.067     0.067 r  MEM_WB_i_IBUF[13]_inst/O
+                         net (fo=2, routed)           0.633     0.700    alu_inst/MEM_WB_i_IBUF[3]
+    SLICE_X0Y86          LUT6 (Prop_lut6_I2_O)        0.028     0.728 r  alu_inst/rs2_mem_data_OBUF[13]_inst_i_1/O
+                         net (fo=18, routed)          0.443     1.172    rs2_mem_data_OBUF[13]
+    P26                  OBUF (Prop_obuf_I_O)         1.315     2.486 r  rs2_mem_data_OBUF[13]_inst/O
+                         net (fo=0)                   0.000     2.486    rs2_mem_data[13]
+    P26                                                               r  rs2_mem_data[13] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_i[15]
+                            (input port)
+  Destination:            rs2_mem_data[15]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.492ns  (logic 1.420ns (56.995%)  route 1.072ns (43.005%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T23                                               0.000     0.000 r  MEM_WB_i[15] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_i[15]
+    T23                  IBUF (Prop_ibuf_I_O)         0.077     0.077 r  MEM_WB_i_IBUF[15]_inst/O
+                         net (fo=2, routed)           0.626     0.703    branch_unit_inst/MEM_WB_i_IBUF[15]
+    SLICE_X1Y86          LUT6 (Prop_lut6_I2_O)        0.028     0.731 r  branch_unit_inst/rs2_mem_data_OBUF[15]_inst_i_1/O
+                         net (fo=10, routed)          0.445     1.177    rs2_mem_data_OBUF[15]
+    K26                  OBUF (Prop_obuf_I_O)         1.315     2.492 r  rs2_mem_data_OBUF[15]_inst/O
+                         net (fo=0)                   0.000     2.492    rs2_mem_data[15]
+    K26                                                               r  rs2_mem_data[15] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_i[2]
+                            (input port)
+  Destination:            rs2_mem_data[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.514ns  (logic 1.389ns (55.250%)  route 1.125ns (44.750%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R18                                               0.000     0.000 r  MEM_WB_i[2] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_i[2]
+    R18                  IBUF (Prop_ibuf_I_O)         0.061     0.061 r  MEM_WB_i_IBUF[2]_inst/O
+                         net (fo=2, routed)           0.784     0.845    branch_unit_inst/MEM_WB_i_IBUF[2]
+    SLICE_X1Y84          LUT6 (Prop_lut6_I2_O)        0.028     0.873 r  branch_unit_inst/rs2_mem_data_OBUF[2]_inst_i_1/O
+                         net (fo=10, routed)          0.341     1.214    rs2_mem_data_OBUF[2]
+    M24                  OBUF (Prop_obuf_I_O)         1.300     2.514 r  rs2_mem_data_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     2.514    rs2_mem_data[2]
+    M24                                                               r  rs2_mem_data[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_i[5]
+                            (input port)
+  Destination:            rs2_mem_data[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.526ns  (logic 1.421ns (56.236%)  route 1.106ns (43.764%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    M19                                               0.000     0.000 r  MEM_WB_i[5] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_i[5]
+    M19                  IBUF (Prop_ibuf_I_O)         0.097     0.097 r  MEM_WB_i_IBUF[5]_inst/O
+                         net (fo=2, routed)           0.726     0.823    branch_unit_inst/MEM_WB_i_IBUF[5]
+    SLICE_X1Y85          LUT6 (Prop_lut6_I2_O)        0.028     0.851 r  branch_unit_inst/rs2_mem_data_OBUF[5]_inst_i_1/O
+                         net (fo=10, routed)          0.380     1.231    rs2_mem_data_OBUF[5]
+    P25                  OBUF (Prop_obuf_I_O)         1.295     2.526 r  rs2_mem_data_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     2.526    rs2_mem_data[5]
+    P25                                                               r  rs2_mem_data[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_i[1]
+                            (input port)
+  Destination:            rs2_mem_data[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.529ns  (logic 1.407ns (55.639%)  route 1.122ns (44.361%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    P18                                               0.000     0.000 r  MEM_WB_i[1] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_i[1]
+    P18                  IBUF (Prop_ibuf_I_O)         0.069     0.069 r  MEM_WB_i_IBUF[1]_inst/O
+                         net (fo=2, routed)           0.783     0.852    branch_unit_inst/MEM_WB_i_IBUF[1]
+    SLICE_X1Y83          LUT6 (Prop_lut6_I2_O)        0.028     0.880 r  branch_unit_inst/rs2_mem_data_OBUF[1]_inst_i_1/O
+                         net (fo=10, routed)          0.339     1.219    rs2_mem_data_OBUF[1]
+    L24                  OBUF (Prop_obuf_I_O)         1.310     2.529 r  rs2_mem_data_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.529    rs2_mem_data[1]
+    L24                                                               r  rs2_mem_data[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_i[6]
+                            (input port)
+  Destination:            rs2_mem_data[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.546ns  (logic 1.397ns (54.864%)  route 1.149ns (45.136%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    N18                                               0.000     0.000 r  MEM_WB_i[6] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_i[6]
+    N18                  IBUF (Prop_ibuf_I_O)         0.075     0.075 r  MEM_WB_i_IBUF[6]_inst/O
+                         net (fo=2, routed)           0.741     0.816    branch_unit_inst/MEM_WB_i_IBUF[6]
+    SLICE_X0Y83          LUT6 (Prop_lut6_I2_O)        0.028     0.844 r  branch_unit_inst/rs2_mem_data_OBUF[6]_inst_i_1/O
+                         net (fo=10, routed)          0.408     1.253    rs2_mem_data_OBUF[6]
+    R25                  OBUF (Prop_obuf_I_O)         1.294     2.546 r  rs2_mem_data_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     2.546    rs2_mem_data[6]
+    R25                                                               r  rs2_mem_data[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MEM_WB_i[10]
+                            (input port)
+  Destination:            rs2_mem_data[10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.555ns  (logic 1.369ns (53.574%)  route 1.186ns (46.426%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    P16                                               0.000     0.000 r  MEM_WB_i[10] (IN)
+                         net (fo=0)                   0.000     0.000    MEM_WB_i[10]
+    P16                  IBUF (Prop_ibuf_I_O)         0.054     0.054 r  MEM_WB_i_IBUF[10]_inst/O
+                         net (fo=2, routed)           0.789     0.844    branch_unit_inst/MEM_WB_i_IBUF[10]
+    SLICE_X0Y85          LUT6 (Prop_lut6_I2_O)        0.028     0.872 r  branch_unit_inst/rs2_mem_data_OBUF[10]_inst_i_1/O
+                         net (fo=10, routed)          0.397     1.269    rs2_mem_data_OBUF[10]
+    P24                  OBUF (Prop_obuf_I_O)         1.287     2.555 r  rs2_mem_data_OBUF[10]_inst/O
+                         net (fo=0)                   0.000     2.555    rs2_mem_data[10]
+    P24                                                               r  rs2_mem_data[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ExecutionStage_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ExecutionStage_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="494.242 ns"></ZoomStartTime>
+      <ZoomEndTime time="551.443 ns"></ZoomEndTime>
+      <Cursor1Time time="526.292 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="224"></NameColumnWidth>
+      <ValueColumnWidth column_width="168"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="33" />
+   <wvobject fp_name="/ExecutionStage_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/EX_MEM_RegWrite_i" type="logic">
+      <obj_property name="ElementShortName">EX_MEM_RegWrite_i</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_RegWrite_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/MEM_WB_RegWrite_i" type="logic">
+      <obj_property name="ElementShortName">MEM_WB_RegWrite_i</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_RegWrite_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/ID_EX_RS_i" type="array">
+      <obj_property name="ElementShortName">ID_EX_RS_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_RS_i[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/ID_EX_RT_i" type="array">
+      <obj_property name="ElementShortName">ID_EX_RT_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_RT_i[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/EX_MEM_RD_i" type="array">
+      <obj_property name="ElementShortName">EX_MEM_RD_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_RD_i[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/MEM_WB_RD_i" type="array">
+      <obj_property name="ElementShortName">MEM_WB_RD_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_RD_i[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/rs1_data" type="array">
+      <obj_property name="ElementShortName">rs1_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/rs2_data" type="array">
+      <obj_property name="ElementShortName">rs2_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/EX_MEM_i" type="array">
+      <obj_property name="ElementShortName">EX_MEM_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/MEM_WB_i" type="array">
+      <obj_property name="ElementShortName">MEM_WB_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/alu_op" type="array">
+      <obj_property name="ElementShortName">alu_op[1:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_op[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/is_sw" type="logic">
+      <obj_property name="ElementShortName">is_sw</obj_property>
+      <obj_property name="ObjectShortName">is_sw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/is_lw" type="logic">
+      <obj_property name="ElementShortName">is_lw</obj_property>
+      <obj_property name="ObjectShortName">is_lw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/is_lui" type="logic">
+      <obj_property name="ElementShortName">is_lui</obj_property>
+      <obj_property name="ObjectShortName">is_lui</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/branch" type="logic">
+      <obj_property name="ElementShortName">branch</obj_property>
+      <obj_property name="ObjectShortName">branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/is_jal" type="logic">
+      <obj_property name="ElementShortName">is_jal</obj_property>
+      <obj_property name="ObjectShortName">is_jal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/funct3" type="array">
+      <obj_property name="ElementShortName">funct3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">funct3[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/funct7" type="array">
+      <obj_property name="ElementShortName">funct7[6:0]</obj_property>
+      <obj_property name="ObjectShortName">funct7[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/prediction_valid" type="logic">
+      <obj_property name="ElementShortName">prediction_valid</obj_property>
+      <obj_property name="ObjectShortName">prediction_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/predicted_pc" type="array">
+      <obj_property name="ElementShortName">predicted_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">predicted_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/alu_src" type="logic">
+      <obj_property name="ElementShortName">alu_src</obj_property>
+      <obj_property name="ObjectShortName">alu_src</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/immediate_data" type="array">
+      <obj_property name="ElementShortName">immediate_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">immediate_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/PC_ID_EX" type="array">
+      <obj_property name="ElementShortName">PC_ID_EX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_ID_EX[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/ALUSrcA" type="logic">
+      <obj_property name="ElementShortName">ALUSrcA</obj_property>
+      <obj_property name="ObjectShortName">ALUSrcA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/is_jalr" type="logic">
+      <obj_property name="ElementShortName">is_jalr</obj_property>
+      <obj_property name="ObjectShortName">is_jalr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/alu_out" type="array">
+      <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/branch_taken" type="logic">
+      <obj_property name="ElementShortName">branch_taken</obj_property>
+      <obj_property name="ObjectShortName">branch_taken</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/branch_addr" type="array">
+      <obj_property name="ElementShortName">branch_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">branch_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/pc_redirect" type="logic">
+      <obj_property name="ElementShortName">pc_redirect</obj_property>
+      <obj_property name="ObjectShortName">pc_redirect</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/flush_fetch" type="logic">
+      <obj_property name="ElementShortName">flush_fetch</obj_property>
+      <obj_property name="ObjectShortName">flush_fetch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ExecutionStage_tb/rs2_mem_data" type="array">
+      <obj_property name="ElementShortName">rs2_mem_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2_mem_data[31:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,242 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue May  6 19:54:51 2025
+# Process ID         : 26680
+# Current directory  : M:/College/BTP/Vivado_Simulations/Execute/EX_Stage/EX_Stage.runs/synth_1
+# Command line       : vivado.exe -log ExecutionStage.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ExecutionStage.tcl
+# Log file           : M:/College/BTP/Vivado_Simulations/Execute/EX_Stage/EX_Stage.runs/synth_1/ExecutionStage.vds
+# Journal file       : M:/College/BTP/Vivado_Simulations/Execute/EX_Stage/EX_Stage.runs/synth_1\vivado.jou
+# Running On         : Mohit
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 7886 MB
+# Swap memory        : 13557 MB
+# Total Virtual      : 21444 MB
+# Available Virtual  : 3387 MB
+#-----------------------------------------------------------
+source ExecutionStage.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental M:/College/BTP/Vivado_Simulations/Execute/EX_Stage/EX_Stage.srcs/utils_1/imports/synth_1/ExecutionStage.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from M:/College/BTP/Vivado_Simulations/Execute/EX_Stage/EX_Stage.srcs/utils_1/imports/synth_1/ExecutionStage.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top ExecutionStage -part xc7k160tifbv676-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160ti'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9636
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 777.547 ; gain = 474.566
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ExecutionStage' [M:/College/BTP/Vivado_Simulations/Execute/Execute_Stage.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ForwardingUnitWithMUX' [M:/College/BTP/Vivado_Simulations/Execute/Forwarding_Unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ForwardingUnitWithMUX' (0#1) [M:/College/BTP/Vivado_Simulations/Execute/Forwarding_Unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Control' [M:/College/BTP/Vivado_Simulations/Execute/ALU_Control.v:1]
+INFO: [Synth 8-226] default block is never used [M:/College/BTP/Vivado_Simulations/Execute/ALU_Control.v:26]
+INFO: [Synth 8-226] default block is never used [M:/College/BTP/Vivado_Simulations/Execute/ALU_Control.v:28]
+INFO: [Synth 8-226] default block is never used [M:/College/BTP/Vivado_Simulations/Execute/ALU_Control.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Control' (0#1) [M:/College/BTP/Vivado_Simulations/Execute/ALU_Control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [M:/College/BTP/Vivado_Simulations/Execute/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [M:/College/BTP/Vivado_Simulations/Execute/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Branch_Unit' [M:/College/BTP/Vivado_Simulations/Execute/Branch_Unit.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Branch_Unit' (0#1) [M:/College/BTP/Vivado_Simulations/Execute/Branch_Unit.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ExecutionStage' (0#1) [M:/College/BTP/Vivado_Simulations/Execute/Execute_Stage.v:2]
+WARNING: [Synth 8-7129] Port funct7[6] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[4] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[3] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[2] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[1] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[0] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module ExecutionStage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module ExecutionStage is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 884.375 ; gain = 581.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 884.375 ; gain = 581.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tifbv676-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 884.375 ; gain = 581.395
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tifbv676-2L
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 884.375 ; gain = 581.395
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   3 Input   32 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 5     
+	   5 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port funct7[6] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[4] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[3] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[2] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[1] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[0] in module ALU_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module ExecutionStage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module ExecutionStage is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1205.461 ; gain = 902.480
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1206.301 ; gain = 903.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1206.301 ; gain = 903.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1290.754 ; gain = 987.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1290.754 ; gain = 987.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1290.754 ; gain = 987.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1290.754 ; gain = 987.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1290.754 ; gain = 987.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1290.754 ; gain = 987.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    61|
+|2     |LUT1   |     1|
+|3     |LUT2   |   103|
+|4     |LUT3   |    73|
+|5     |LUT4   |   324|
+|6     |LUT5   |    70|
+|7     |LUT6   |   368|
+|8     |IBUF   |   261|
+|9     |OBUF   |   100|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+------------+------+
+|      |Instance           |Module      |Cells |
++------+-------------------+------------+------+
+|1     |top                |            |  1361|
+|2     |  alu_inst         |ALU         |   787|
+|3     |  branch_unit_inst |Branch_Unit |   212|
++------+-------------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1290.754 ; gain = 987.773
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1290.754 ; gain = 987.773
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1290.754 ; gain = 987.773
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1306.809 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 61 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1416.590 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 2f3cbb98
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 1416.590 ; gain = 1119.809
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1416.590 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'M:/College/BTP/Vivado_Simulations/Execute/EX_Stage/EX_Stage.runs/synth_1/ExecutionStage.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file ExecutionStage_utilization_synth.rpt -pb ExecutionStage_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May  6 19:55:53 2025...
