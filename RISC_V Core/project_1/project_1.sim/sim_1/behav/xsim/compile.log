@@ -1,0 +1,47 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/BPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BPU_Top
+INFO: [VRFC 10-311] analyzing module PHT
+INFO: [VRFC 10-311] analyzing module GHR_PC
+INFO: [VRFC 10-311] analyzing module BTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Branch_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Decode_Stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decode_Stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Execute_Stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Execution_Stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/FetchStage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FetchStage
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Forwarding_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ForwardingUnitWithMUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/GPR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module GPR
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Imm_Gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Inst_Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module INST_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Mem_Stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mem_Stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/RISC-V_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISC_V_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/WriteBack_Stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WriteBack_Stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new/RISC-V_Sim_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_RISC_V_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

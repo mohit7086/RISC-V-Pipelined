@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k160tifbv676-2L" LaunchTime="1746685613" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/RISC_V_Top.dcp">
-  <File Type="PA-TCL" Name="RISC_V_Top.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7k160tifbv676-2L" LaunchTime="1746685613" LaunchIncrCheckpoint="$PPRDIR/../../../Vivado_Simulations/RISC_V Core/project_1/project_1.srcs/utils_1/imports/synth_1/RISC_V_Top.dcp">
   <File Type="REPORTS-TCL" Name="RISC_V_Top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="RISC_V_Top.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="RISC_V_Top_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="RISC_V_Top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="RISC_V_Top_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="RISC_V_Top.tcl"/>
+  <File Type="RDS-RDS" Name="RISC_V_Top.vds"/>
   <File Type="RDS-DCP" Name="RISC_V_Top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="RISC_V_Top_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="RISC_V_Top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../ALU.v">
@@ -186,9 +183,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

@@ -1,0 +1,344 @@
+
+module Execution_Stage(
+    // Clock and Reset
+    input              clk,            // Clock signal for synchronization
+    input              rst,            // Reset signal (active high)
+    
+    // Forwarding Unit Inputs (from ID/EX pipeline register)
+    input              EX_MEM_RegWrite_i,
+    input              MEM_WB_RegWrite_i,
+    input      [4:0]   ID_EX_RS_i,
+    input      [4:0]   ID_EX_RT_i,
+    input      [4:0]   EX_MEM_RD_i,
+    input      [4:0]   MEM_WB_RD_i,
+    input      [31:0]  rs1_data,       // Default data for RS1
+    input      [31:0]  rs2_data,       // Default data for RS2
+    input      [31:0]  EX_MEM_i,       // Data from EX/MEM stage
+    input      [31:0]  MEM_WB_i,       // Data from MEM/WB stage
+
+    // ALU Control and Instruction Decode Inputs (from ID/EX pipeline register)
+    input      [1:0]   alu_op,         // ALUOp signal from Control Unit
+    input              is_sw,          // Asserted for store word instructions
+    input              is_lw,          // Asserted for load word instructions
+    input              is_lui,         // Asserted for LUI instructions
+    input              branch,         // Asserted for branch instructions
+    input              is_jal,         // Asserted for JAL (return address)
+    input      [2:0]   funct3,         // Instruction funct3 field
+    input      [6:0]   funct7,         // Instruction funct7 field
+
+    input              prediction_valid,  // Prediction validity from Fetch
+    input      [31:0]  predicted_pc,      // Predicted target address
+
+
+    // Operand Selection (from ID/EX pipeline register)
+    input              alu_src,        // 0: use RS2; 1: use immediate_data
+    input      [31:0]  immediate_data, // Immediate value (I-type, branch, etc.)
+    input      [31:0]  PC_ID_EX,       // PC from ID/EX stage (for AUIPC/JALR)
+    input              ALUSrcA,        // If asserted, use PC_ID_EX for operand A
+    input              is_jalr,        // Asserted for JALR (LSB masking)
+
+    // Outputs (to EX/MEM pipeline register)
+    output wire [31:0]  alu_out,        // Registered ALU result
+    output wire [31:0] rs2_mem_data,    // Data to MEM stage for store instructions
+
+    //(To Fetch stage Directly)
+    output wire         branch_taken,   
+    output wire [31:0]  branch_addr,     // Registered branch target address4
+    output wire        pc_redirect,     // Combinational PC redirect signal
+    output wire         flush_fetch,    // predicted_pc =! branch_addr
+    output wire         branch_resolve   // Branch resolve signal for BPU
+   
+);
+
+    // Forwarding wires for RS1 and RS2 (combinational)
+    wire [31:0] forwarded_rs1, forwarded_rs2;
+
+    // ALU Control and Result (combinational)
+    wire [3:0] alu_ctrl;
+    wire [31:0] raw_alu_out;
+
+    // Branch Unit signals (combinational)
+    wire        branch_taken_comb;
+    wire [31:0] branch_addr_comb;
+
+    // Intermediate signals for output registration
+    wire [31:0] PC_plus_4 = PC_ID_EX + 32'd4; // Dedicated adder for return address
+    wire [31:0] alu_out_comb = (is_jal || is_jalr) ? PC_plus_4 : raw_alu_out;
+
+    // Operand A/B Selection Logic (combinational)
+    wire [31:0] operandA = is_lui ? 32'b0 : (ALUSrcA ? PC_ID_EX : forwarded_rs1);
+    wire [31:0] operandB = alu_src ? immediate_data : forwarded_rs2;
+
+    //----------------------------------------------------------
+    // Combinational Logic Blocks
+    //----------------------------------------------------------
+    // Forwarding Unit
+    ForwardingUnitWithMUX FU_inst (
+        .EX_MEM_RegWrite_i(EX_MEM_RegWrite_i),
+        .MEM_WB_RegWrite_i(MEM_WB_RegWrite_i),
+        .ID_EX_RS_i(ID_EX_RS_i),
+        .ID_EX_RT_i(ID_EX_RT_i),
+        .EX_MEM_RD_i(EX_MEM_RD_i),
+        .MEM_WB_RD_i(MEM_WB_RD_i),
+        .rs1_data(rs1_data),
+        .rs2_data(rs2_data),
+        .EX_MEM_i(EX_MEM_i),
+        .MEM_WB_i(MEM_WB_i),
+        .ForwardedDataA_o(forwarded_rs1),
+        .ForwardedDataB_o(forwarded_rs2)
+    );
+
+    // ALU Control
+    ALU_Control alu_control_inst (
+        .alu_op(alu_op),
+        .is_lui(is_lui),
+        .is_sw(is_sw),
+        .is_lw(is_lw),
+        .funct3(funct3),
+        .funct7(funct7),
+        .alu_ctrl(alu_ctrl)
+    );
+
+    // ALU
+    ALU alu_inst (
+        .a(operandA),
+        .b(operandB),
+        .alu_ctrl(alu_ctrl),
+        .alu_out(raw_alu_out)
+    );
+
+    // Branch Unit
+    Branch_Unit branch_unit_inst (
+        .funct3(funct3),
+        .a(forwarded_rs1),
+        .b(forwarded_rs2),
+        .branch_taken(branch_taken_comb)
+    );
+
+    // Branch Address Calculation
+        assign branch_addr_comb = is_jalr ? (raw_alu_out & ~32'h1) : 
+                             (is_jal ? (PC_ID_EX + immediate_data) : 
+                             (PC_ID_EX + immediate_data)); // 
+
+    //----------------------------------------------------------
+    // Misprediction Detection Logic 
+    //----------------------------------------------------------
+    wire prediction_mismatch = branch && 
+                              (prediction_valid != branch_taken_comb);
+    wire target_mismatch = ((branch && branch_taken_comb)) && 
+                          (predicted_pc != branch_addr_comb);
+
+    wire is_misprediction = prediction_mismatch || target_mismatch;
+    
+    //----------------------------------------------------------
+    //PC Redirect Logic 
+    //----------------------------------------------------------
+    wire pc_redirect_comb = (is_jal || is_jalr || (branch_taken_comb && branch));
+    wire flush_fetch_comb = is_misprediction;       // Combinational flush signal
+    
+
+    //----------------------------------------------------------
+    // Output Registration (to EX/MEM pipeline register)
+    //----------------------------------------------------------
+    assign alu_out      = alu_out_comb;
+    assign branch_taken = branch ? branch_taken_comb : 1'b0;
+    assign branch_addr  = branch_addr_comb;
+    assign pc_redirect  = pc_redirect_comb;    
+    assign flush_fetch  = is_misprediction;
+    assign rs2_mem_data = forwarded_rs2;
+    assign branch_resolve = (is_jal || is_jalr || branch);
+
+endmodule
+
+
+
+
+module ALU_Control (
+    input  [1:0] alu_op,      // From Control Unit
+    input        is_lui,      // Asserted for LUI instructions
+  	input 		 is_sw,
+    input 		 is_lw,
+    input  [2:0] funct3,      // Instruction funct3 field
+    input  [6:0] funct7,      // Instruction funct7 field
+    output reg [3:0] alu_ctrl // ALU operation code
+);
+
+    // Shared ALU operation codes (must match with ALU module)
+    localparam [3:0] 
+        ALU_ADD  = 4'b0000,
+        ALU_SUB  = 4'b0001,
+        ALU_SLL  = 4'b0010,
+        ALU_SLT  = 4'b0011,
+        ALU_SLTU = 4'b0100,
+        ALU_XOR  = 4'b0101,
+        ALU_SRL  = 4'b0110,
+        ALU_SRA  = 4'b0111,
+        ALU_OR   = 4'b1000,
+        ALU_AND  = 4'b1001,
+        ALU_PASS = 4'b1010; // For LUI: pass immediate directly
+
+    always @(*) begin
+        case (alu_op)
+            2'b00: begin // I-type/Load/Store instructions
+                case (funct3)
+                    3'b000: alu_ctrl = ALU_ADD;   // ADDI, LW, SW
+                    3'b001: alu_ctrl = ALU_SLL;   // SLLI
+                  3'b010: alu_ctrl = (is_sw || is_lw) ? ALU_ADD : ALU_SLT;   // SLTI
+                    3'b011: alu_ctrl = ALU_SLTU;  // SLTIU
+                    3'b100: alu_ctrl = ALU_XOR;   // XORI
+                    3'b101: alu_ctrl = (funct7[5]) ? ALU_SRA : ALU_SRL; // SRAI/SRLI
+                    3'b110: alu_ctrl = ALU_OR;    // ORI
+                    3'b111: alu_ctrl = ALU_AND;   // ANDI
+                    default: alu_ctrl = ALU_ADD;
+                endcase
+            end
+
+            2'b01: alu_ctrl = ALU_SUB; // Branch comparisons (uses subtraction)
+
+            2'b10: begin // R-type instructions
+                case (funct3)
+                    3'b000: alu_ctrl = (funct7[5]) ? ALU_SUB : ALU_ADD; // ADD/SUB
+                    3'b001: alu_ctrl = ALU_SLL;   // SLL
+                    3'b010: alu_ctrl = ALU_SLT;   // SLT
+                    3'b011: alu_ctrl = ALU_SLTU;  // SLTU
+                    3'b100: alu_ctrl = ALU_XOR;   // XOR
+                    3'b101: alu_ctrl = (funct7[5]) ? ALU_SRA : ALU_SRL; // SRA/SRL
+                    3'b110: alu_ctrl = ALU_OR;    // OR
+                    3'b111: alu_ctrl = ALU_AND;   // AND
+                    default: alu_ctrl = ALU_ADD;
+                endcase
+            end
+
+            2'b11: begin // U-type (LUI/AUIPC) or JALR
+                if (is_lui)
+                    alu_ctrl = ALU_PASS; // LUI: output immediate directly
+                else
+                    alu_ctrl = ALU_ADD;  // AUIPC/JALR: perform PC + immediate addition
+            end
+
+            default: alu_ctrl = ALU_ADD;
+        endcase
+    end
+
+endmodule
+
+
+
+module ALU (
+    input [31:0] a,         // First operand
+    input [31:0] b,         // Second operand
+    input [3:0]  alu_ctrl,  // Control signal from ALU Control Unit
+    output reg  [31:0] alu_out    // ALU result
+);
+
+// ALU operation codes (Must match ALU_Control module)
+localparam [3:0] 
+    ALU_ADD   = 4'b0000,  // Addition
+    ALU_SUB   = 4'b0001,  // Subtraction
+    ALU_SLL   = 4'b0010,  // Shift left logical
+    ALU_SLT   = 4'b0011,  // Set less than (signed)
+    ALU_SLTU  = 4'b0100,  // Set less than (unsigned)
+    ALU_XOR   = 4'b0101,  // Bitwise XOR
+    ALU_SRL   = 4'b0110,  // Shift right logical
+    ALU_SRA   = 4'b0111,  // Shift right arithmetic (signed)
+    ALU_OR    = 4'b1000,  // Bitwise OR
+    ALU_AND   = 4'b1001,  // Bitwise AND
+    ALU_PASS  = 4'b1010;  // Pass operand B (used for LUI instruction)
+
+// ALU operation logic
+always @(*) begin
+    case (alu_ctrl)
+        ALU_ADD:  alu_out = a + b; //(for ADD, ADDI, LW, SW, AUIPC, JALR)
+        ALU_SUB:  alu_out = a - b; 
+        ALU_SLL:  alu_out = a << b[4:0];  // Shift Left Logical (only lower 5 bits used)
+        ALU_SLT:  alu_out = ($signed(a) < $signed(b)) ? 32'b1 : 32'b0; // Set Less Than (signed)
+        ALU_SLTU: alu_out = (a < b) ? 32'b1 : 32'b0;  // Set Less Than (unsigned)
+        ALU_XOR:  alu_out = a ^ b;   // Bitwise XOR
+        ALU_SRL:  alu_out = a >> b[4:0];  // Shift Right Logical (only lower 5 bits used)
+        ALU_SRA:  alu_out = $signed(a) >>> b[4:0];  // Shift Right Arithmetic (preserves sign)
+        ALU_OR:   alu_out = a | b; 
+        ALU_AND:  alu_out = a & b;  
+        ALU_PASS: alu_out = b;       // Pass immediate for LUI instruction
+        default:  alu_out = 32'b0;   // Default case (should not be reached)
+    endcase
+end
+
+endmodule
+
+
+module Branch_Unit (
+    input [2:0] funct3,      // Branch instruction's funct3 field
+    input [31:0] a,          // Operand A (forwarded RS1)
+    input [31:0] b,          // Operand B (forwarded RS2)
+    output reg branch_taken // Branch decision signal
+);
+
+always @(*) begin
+    case (funct3)
+        3'b000: branch_taken = (a == b);              // BEQ
+        3'b001: branch_taken = (a != b);              // BNE
+        3'b100: branch_taken = ($signed(a) < $signed(b)); // BLT
+        3'b101: branch_taken = ($signed(a) >= $signed(b)); // BGE
+        3'b110: branch_taken = (a < b);               // BLTU
+        3'b111: branch_taken = (a >= b);              // BGEU
+        default: branch_taken = 1'b0;
+    endcase
+end
+
+endmodule
+
+module ForwardingUnitWithMUX (
+    input               EX_MEM_RegWrite_i,
+    input               MEM_WB_RegWrite_i,
+    input       [4:0]   ID_EX_RS_i,
+    input       [4:0]   ID_EX_RT_i,
+    input       [4:0]   EX_MEM_RD_i,
+    input       [4:0]   MEM_WB_RD_i,
+    input       [31:0]  rs1_data,  // Default RS1 data
+    input       [31:0]  rs2_data,  // Default RS2 data
+    input       [31:0]  EX_MEM_i,  // Data from EX/MEM stage
+    input       [31:0]  MEM_WB_i,  // Data from MEM/WB stage
+    output reg  [31:0]  ForwardedDataA_o,
+    output reg  [31:0]  ForwardedDataB_o
+);
+
+    reg [1:0] ForwardA, ForwardB; // Control signals for forwarding selection
+
+    // Determine forwarding for RS1 and RS2
+    always @(*) begin
+        // Default: no forwarding
+        ForwardA = 2'b00;
+        ForwardB = 2'b00;
+
+        // Forwarding for RS1: Check if EX/MEM or MEM/WB have a valid write
+        if (EX_MEM_RegWrite_i && (EX_MEM_RD_i != 5'b0) && (EX_MEM_RD_i == ID_EX_RS_i))
+            ForwardA = 2'b10;
+        else if (MEM_WB_RegWrite_i && (MEM_WB_RD_i != 5'b0) && (MEM_WB_RD_i == ID_EX_RS_i))
+            ForwardA = 2'b01;
+
+        // Forwarding for RS2: Check if EX/MEM or MEM/WB have a valid write
+        if (EX_MEM_RegWrite_i && (EX_MEM_RD_i != 5'b0) && (EX_MEM_RD_i == ID_EX_RT_i))
+            ForwardB = 2'b10;
+        else if (MEM_WB_RegWrite_i && (MEM_WB_RD_i != 5'b0) && (MEM_WB_RD_i == ID_EX_RT_i))
+            ForwardB = 2'b01;
+    end
+
+    // Multiplexing logic for RS1 and RS2
+    always @(*) begin
+        case (ForwardA)
+            2'b00: ForwardedDataA_o = rs1_data;
+            2'b01: ForwardedDataA_o = MEM_WB_i;
+            2'b10: ForwardedDataA_o = EX_MEM_i;
+            default: ForwardedDataA_o = rs1_data;
+        endcase
+
+        case (ForwardB)
+            2'b00: ForwardedDataB_o = rs2_data;
+            2'b01: ForwardedDataB_o = MEM_WB_i;
+            2'b10: ForwardedDataB_o = EX_MEM_i;
+            default: ForwardedDataB_o = rs2_data;
+        endcase
+    end
+
+endmodule
+

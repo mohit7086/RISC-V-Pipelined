@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri May 16 08:49:51 2025
+# Process ID         : 32536
+# Current directory  : M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent7360 M:\College\BTP\RISC-V_Pipelined\RISC_V Core\project_1\project_1.xpr
+# Log file           : M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/vivado.log
+# Journal file       : M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1\vivado.jou
+# Running On         : Mohit
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 7886 MB
+# Swap memory        : 24393 MB
+# Total Virtual      : 32280 MB
+# Available Virtual  : 7435 MB
+#-----------------------------------------------------------
+start_gui
+open_project {M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new
+file mkdir M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new
+file mkdir M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new
+file mkdir M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new
+file mkdir M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+file mkdir M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new
+file mkdir {M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new}
+close [ open {M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new/RISC-V_Sim_tb.v} w ]
+add_files -fileset sim_1 {{M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new/RISC-V_Sim_tb.v}}
+update_compile_order -fileset sim_1
+set_property is_enabled false [get_files  {{M:/College/BTP/RISC-V_Pipelined/RISC_V Core/BPU_Top_tb.v}}]
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new/program1.mem} w ]
+add_files -fileset sim_1 {{M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new/program1.mem}}
+launch_simulation
+source tb_RISC_V_Top.tcl
+close_sim

@@ -1,0 +1,29 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../ALU.v" \
+"../../../../../ALU_Control.v" \
+"../../../../../BPU.v" \
+"../../../../../Branch_Unit.v" \
+"../../../../../Control_Unit.v" \
+"../../../../../DataMemory.v" \
+"../../../../../Decode_Stage.v" \
+"../../../../../EX_MEM.v" \
+"../../../../../Execute_Stage.v" \
+"../../../../../FetchStage.v" \
+"../../../../../Forwarding_Unit.v" \
+"../../../../../GPR.v" \
+"../../../../../ID_EX.v" \
+"../../../../../IF_ID.v" \
+"../../../../../Imm_Gen.v" \
+"../../../../../Inst_Mem.v" \
+"../../../../../MEM_WB.v" \
+"../../../../../Mem_Stage.v" \
+"../../../../../RISC-V_Top.v" \
+"../../../../../WriteBack_Stage.v" \
+"../../../../project_1.srcs/sim_1/new/RISC-V_Sim_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

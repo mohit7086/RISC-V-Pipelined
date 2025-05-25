@@ -7,10 +7,9 @@ module INST_MEM(
     reg [7:0] Memory [0:127]; // 128-byte memory
     
     // Initialize memory (for simulation)
-   initial begin
-        $readmemh("program1.mem", Memory);
+    initial begin
+        $readmemh("program.hex", Memory);
     end
-    
     
     // Asynchronous read (combinational logic)
     assign Instruction_Code = {Memory[PC + 3], Memory[PC + 2], 
@@ -20,7 +19,7 @@ module INST_MEM(
     always @(posedge clk) begin
         if (rst) begin
             // Re-initialize memory on reset if needed
-           $readmemh("program1.mem", Memory);
+            $readmemh("program.hex", Memory);
         end
     end
 endmodule

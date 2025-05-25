@@ -2,7 +2,8 @@ module RISC_V_Top(
     input clk,                            // Clock signal   
     input rst,                            // Reset signal
     output [31:0] current_pc,             // Output current PC for debugging
-    output [31:0] instruction             // Output current instruction
+    output [31:0] instruction,             // Output current instruction
+    output [4:0] current_rd 
 );
 
 // ========== Wire Declarations ==========

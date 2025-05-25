@@ -1,0 +1,159 @@
+Time resolution is 1 ps
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 0
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 1
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 2
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 3
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 4
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 5
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 6
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 7
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 8
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 9
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 10
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 11
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 12
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 13
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 14
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 15
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 16
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 17
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 18
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 19
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 0
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 1
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 2
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 3
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 4
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 5
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 6
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 7
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 8
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 9
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 10
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 11
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 12
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 13
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 14
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 15
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 16
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 17
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 18
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 19
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 0
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 1
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 2
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 3
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 4
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 5
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 6
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 7
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 8
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 9
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 10
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 11
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 12
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 13
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 14
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 15
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 16
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 17
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 18
+WARNING: Data truncated while reading Datafile: program1.mem, while loading at index: 19
+Time=30000 | PC=0x00000000 | Instr=0xb3339313 | rd_wb=0
+Time=40000 | PC=0x00000004 | Instr=0xb3339313 | rd_wb=0
+Time=50000 | PC=0x00000004 | Instr=0x9333b333 | rd_wb=0
+Time=60000 | PC=0x00000008 | Instr=0x9333b333 | rd_wb=0
+Time=70000 | PC=0x00000008 | Instr=0x6f936313 | rd_wb=6
+Time=80000 | PC=0x0000000c | Instr=0x6f936313 | rd_wb=6
+Time=90000 | PC=0x0000000c | Instr=0xb3b3b393 | rd_wb=6
+Time=100000 | PC=0x00000010 | Instr=0xb3b3b393 | rd_wb=6
+Time=110000 | PC=0x00000010 | Instr=0x6793b3b3 | rd_wb=6
+Time=120000 | PC=0x00000014 | Instr=0x6793b3b3 | rd_wb=6
+Time=130000 | PC=0x00000014 | Instr=0xxxxxxxxx | rd_wb=7
+Time=140000 | PC=0x00000018 | Instr=0xxxxxxxxx | rd_wb=7
+Time=150000 | PC=0x00000018 | Instr=0xxxxxxxxx | rd_wb=7
+Time=160000 | PC=0x0000001c | Instr=0xxxxxxxxx | rd_wb=7
+Time=170000 | PC=0x0000001c | Instr=0xxxxxxxxx | rd_wb=x
+Time=180000 | PC=0x00000020 | Instr=0xxxxxxxxx | rd_wb=x
+Time=190000 | PC=0x00000020 | Instr=0xxxxxxxxx | rd_wb=x
+Time=200000 | PC=0x00000024 | Instr=0xxxxxxxxx | rd_wb=x
+Time=210000 | PC=0x00000024 | Instr=0xxxxxxxxx | rd_wb=x
+Time=220000 | PC=0x00000028 | Instr=0xxxxxxxxx | rd_wb=x
+Time=230000 | PC=0x00000028 | Instr=0xxxxxxxxx | rd_wb=x
+Time=240000 | PC=0x0000002c | Instr=0xxxxxxxxx | rd_wb=x
+Time=250000 | PC=0x0000002c | Instr=0xxxxxxxxx | rd_wb=x
+Time=260000 | PC=0x00000030 | Instr=0xxxxxxxxx | rd_wb=x
+Time=270000 | PC=0x00000030 | Instr=0xxxxxxxxx | rd_wb=x
+Time=280000 | PC=0x00000034 | Instr=0xxxxxxxxx | rd_wb=x
+Time=290000 | PC=0x00000034 | Instr=0xxxxxxxxx | rd_wb=x
+Time=300000 | PC=0x00000038 | Instr=0xxxxxxxxx | rd_wb=x
+Time=310000 | PC=0x00000038 | Instr=0xxxxxxxxx | rd_wb=x
+Time=320000 | PC=0x0000003c | Instr=0xxxxxxxxx | rd_wb=x
+Time=330000 | PC=0x0000003c | Instr=0xxxxxxxxx | rd_wb=x
+Time=340000 | PC=0x00000040 | Instr=0xxxxxxxxx | rd_wb=x
+Time=350000 | PC=0x00000040 | Instr=0xxxxxxxxx | rd_wb=x
+Time=360000 | PC=0x00000044 | Instr=0xxxxxxxxx | rd_wb=x
+Time=370000 | PC=0x00000044 | Instr=0xxxxxxxxx | rd_wb=x
+Time=380000 | PC=0x00000048 | Instr=0xxxxxxxxx | rd_wb=x
+Time=390000 | PC=0x00000048 | Instr=0xxxxxxxxx | rd_wb=x
+Time=400000 | PC=0x0000004c | Instr=0xxxxxxxxx | rd_wb=x
+Time=410000 | PC=0x0000004c | Instr=0xxxxxxxxx | rd_wb=x
+Time=420000 | PC=0x00000050 | Instr=0xxxxxxxxx | rd_wb=x
+Time=430000 | PC=0x00000050 | Instr=0xxxxxxxxx | rd_wb=x
+Time=440000 | PC=0x00000054 | Instr=0xxxxxxxxx | rd_wb=x
+Time=450000 | PC=0x00000054 | Instr=0xxxxxxxxx | rd_wb=x
+Time=460000 | PC=0x00000058 | Instr=0xxxxxxxxx | rd_wb=x
+Time=470000 | PC=0x00000058 | Instr=0xxxxxxxxx | rd_wb=x
+Time=480000 | PC=0x0000005c | Instr=0xxxxxxxxx | rd_wb=x
+Time=490000 | PC=0x0000005c | Instr=0xxxxxxxxx | rd_wb=x
+Time=500000 | PC=0x00000060 | Instr=0xxxxxxxxx | rd_wb=x
+Time=510000 | PC=0x00000060 | Instr=0xxxxxxxxx | rd_wb=x
+Time=520000 | PC=0x00000064 | Instr=0xxxxxxxxx | rd_wb=x
+Time=530000 | PC=0x00000064 | Instr=0xxxxxxxxx | rd_wb=x
+Time=540000 | PC=0x00000068 | Instr=0xxxxxxxxx | rd_wb=x
+Time=550000 | PC=0x00000068 | Instr=0xxxxxxxxx | rd_wb=x
+Time=560000 | PC=0x0000006c | Instr=0xxxxxxxxx | rd_wb=x
+Time=570000 | PC=0x0000006c | Instr=0xxxxxxxxx | rd_wb=x
+Time=580000 | PC=0x00000070 | Instr=0xxxxxxxxx | rd_wb=x
+Time=590000 | PC=0x00000070 | Instr=0xxxxxxxxx | rd_wb=x
+Time=600000 | PC=0x00000074 | Instr=0xxxxxxxxx | rd_wb=x
+Time=610000 | PC=0x00000074 | Instr=0xxxxxxxxx | rd_wb=x
+Time=620000 | PC=0x00000078 | Instr=0xxxxxxxxx | rd_wb=x
+Time=630000 | PC=0x00000078 | Instr=0xxxxxxxxx | rd_wb=x
+Time=640000 | PC=0x0000007c | Instr=0xxxxxxxxx | rd_wb=x
+Time=650000 | PC=0x0000007c | Instr=0xxxxxxxxx | rd_wb=x
+Time=660000 | PC=0x00000080 | Instr=0xxxxxxxxx | rd_wb=x
+Time=670000 | PC=0x00000080 | Instr=0xxxxxxxxx | rd_wb=x
+Time=680000 | PC=0x00000084 | Instr=0xxxxxxxxx | rd_wb=x
+Time=690000 | PC=0x00000084 | Instr=0xxxxxxxxx | rd_wb=x
+Time=700000 | PC=0x00000088 | Instr=0xxxxxxxxx | rd_wb=x
+Time=710000 | PC=0x00000088 | Instr=0xxxxxxxxx | rd_wb=x
+Time=720000 | PC=0x0000008c | Instr=0xxxxxxxxx | rd_wb=x
+Time=730000 | PC=0x0000008c | Instr=0xxxxxxxxx | rd_wb=x
+Time=740000 | PC=0x00000090 | Instr=0xxxxxxxxx | rd_wb=x
+Time=750000 | PC=0x00000090 | Instr=0xxxxxxxxx | rd_wb=x
+Time=760000 | PC=0x00000094 | Instr=0xxxxxxxxx | rd_wb=x
+Time=770000 | PC=0x00000094 | Instr=0xxxxxxxxx | rd_wb=x
+Time=780000 | PC=0x00000098 | Instr=0xxxxxxxxx | rd_wb=x
+Time=790000 | PC=0x00000098 | Instr=0xxxxxxxxx | rd_wb=x
+Time=800000 | PC=0x0000009c | Instr=0xxxxxxxxx | rd_wb=x
+Time=810000 | PC=0x0000009c | Instr=0xxxxxxxxx | rd_wb=x
+Time=820000 | PC=0x000000a0 | Instr=0xxxxxxxxx | rd_wb=x
+Time=830000 | PC=0x000000a0 | Instr=0xxxxxxxxx | rd_wb=x
+Time=840000 | PC=0x000000a4 | Instr=0xxxxxxxxx | rd_wb=x
+Time=850000 | PC=0x000000a4 | Instr=0xxxxxxxxx | rd_wb=x
+Time=860000 | PC=0x000000a8 | Instr=0xxxxxxxxx | rd_wb=x
+Time=870000 | PC=0x000000a8 | Instr=0xxxxxxxxx | rd_wb=x
+Time=880000 | PC=0x000000ac | Instr=0xxxxxxxxx | rd_wb=x
+Time=890000 | PC=0x000000ac | Instr=0xxxxxxxxx | rd_wb=x
+Time=900000 | PC=0x000000b0 | Instr=0xxxxxxxxx | rd_wb=x
+Time=910000 | PC=0x000000b0 | Instr=0xxxxxxxxx | rd_wb=x
+Time=920000 | PC=0x000000b4 | Instr=0xxxxxxxxx | rd_wb=x
+Time=930000 | PC=0x000000b4 | Instr=0xxxxxxxxx | rd_wb=x
+Time=940000 | PC=0x000000b8 | Instr=0xxxxxxxxx | rd_wb=x
+Time=950000 | PC=0x000000b8 | Instr=0xxxxxxxxx | rd_wb=x
+Time=960000 | PC=0x000000bc | Instr=0xxxxxxxxx | rd_wb=x
+Time=970000 | PC=0x000000bc | Instr=0xxxxxxxxx | rd_wb=x
+Time=980000 | PC=0x000000c0 | Instr=0xxxxxxxxx | rd_wb=x
+Time=990000 | PC=0x000000c0 | Instr=0xxxxxxxxx | rd_wb=x
+Time=1000000 | PC=0x000000c4 | Instr=0xxxxxxxxx | rd_wb=x

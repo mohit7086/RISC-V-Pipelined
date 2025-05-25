@@ -1,0 +1,26 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/ALU.v,1746610858,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/ALU_Control.v,,ALU,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/ALU_Control.v,1745931169,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/BPU.v,,ALU_Control,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/BPU.v,1746518748,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Branch_Unit.v,,BPU_Top;BTB;GHR_PC;PHT,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Branch_Unit.v,1742417695,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Control_Unit.v,,Branch_Unit,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Control_Unit.v,1746195771,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/DataMemory.v,,Control_Unit,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/DataMemory.v,1746611218,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Decode_Stage.v,,DataMemory,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Decode_Stage.v,1746614188,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/EX_MEM.v,,Decode_Stage,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/EX_MEM.v,1746611162,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Execute_Stage.v,,EX_MEM,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Execute_Stage.v,1746610609,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/FetchStage.v,,Execution_Stage,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/FetchStage.v,1746550628,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Forwarding_Unit.v,,FetchStage,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Forwarding_Unit.v,1746437275,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/GPR.v,,ForwardingUnitWithMUX,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/GPR.v,1746683382,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/ID_EX.v,,GPR,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/ID_EX.v,1746610577,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/IF_ID.v,,ID_EX,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/IF_ID.v,1746004008,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Imm_Gen.v,,IF_ID,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Imm_Gen.v,1744805426,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Inst_Mem.v,,Imm_Gen,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Inst_Mem.v,1747366553,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/MEM_WB.v,,INST_MEM,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/MEM_WB.v,1746610677,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Mem_Stage.v,,MEM_WB,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/Mem_Stage.v,1746613358,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/RISC-V_Top.v,,Mem_Stage,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/RISC-V_Top.v,1747365970,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/WriteBack_Stage.v,,RISC_V_Top,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/WriteBack_Stage.v,1746608629,verilog,,M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new/RISC-V_Sim_tb.v,,WriteBack_Stage,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
+M:/College/BTP/RISC-V_Pipelined/RISC_V Core/project_1/project_1.srcs/sim_1/new/RISC-V_Sim_tb.v,1747366055,verilog,,,,tb_RISC_V_Top,,,,,,,,
